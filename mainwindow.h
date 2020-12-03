@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "dialog.h"
 #include "promotion.h"
+#include "pack.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

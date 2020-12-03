@@ -12,5 +12,7 @@
         <file>aaa.jpg</file>
         <file>mmm.jpg</file>
         <file>button.mp3</file>
+        <file>back.mp3</file>
     </qresource>
+    <qresource prefix="/sound"/>
 </RCC>

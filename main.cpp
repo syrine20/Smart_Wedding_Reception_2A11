@@ -4,12 +4,15 @@
 #include <QDebug>
 #include <QApplication>
 #include <QMessageBox>
+#include <QSound>
+#include <QMediaPlayer>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
     Connection c;
+
    bool test=c.createconnect();
     if(test)
     {w.show();

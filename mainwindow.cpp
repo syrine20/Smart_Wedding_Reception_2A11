@@ -2,6 +2,12 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include "dialog.h"
+#include <QSound>
+#include <QMediaPlayer>
+#include <QString>
+#include <QDebug>
+
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,6 +28,7 @@ void MainWindow::on_pushButton_connecter_clicked()
     QString mdp = ui -> lineEdit_mdp->text();
     if(pseudo=="y"  && mdp=="y")
     {   hide();
+
         QMessageBox::information(this,"se connecter","Bienvenue!");
         Dialog dialog ;
         dialog.setModal(true);
