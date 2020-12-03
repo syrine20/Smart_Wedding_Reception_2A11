@@ -2,6 +2,8 @@ QT       += core gui sql
 QT   +=sql
 QT += widgets multimedia
 CONFIG += console
+Qt += charts
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,12 +18,14 @@ SOURCES += \
     dialog.cpp \
     main.cpp \
     mainwindow.cpp \
+    pack.cpp \
     promotion.cpp
 
 HEADERS += \
     connection.h \
     dialog.h \
     mainwindow.h \
+    pack.h \
     promotion.h
 
 FORMS += \

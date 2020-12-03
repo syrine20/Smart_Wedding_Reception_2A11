@@ -45,6 +45,7 @@ bool promotion::supprimer(QString id){
     query.prepare("delete from promotion where id = :id");
     query.bindValue(":id",id);
     return query.exec();
+
 }
 
 bool promotion::modifier(int id){
