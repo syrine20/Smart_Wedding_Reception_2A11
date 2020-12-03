@@ -1,23 +1,25 @@
 #include "connection.h"
+#include "salle.h"
+#include "organisation.h"
+#include "decorateur.h"
 
-Connection::Connection()
+//test tutoriel Git
+
+connection::connection()
 {
 
 }
-
-bool Connection::createconnect()
-{bool test=false;
-QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
-db.setDatabaseName("marketing");//inserer le nom de la source de données ODBC
-db.setUserName("yassine");//inserer nom de l'utilisateur
-db.setPassword("yassou98");//inserer mot de passe de cet utilisateur
+bool connection::createconnection()
+{
+    bool test=false;
+db = QSqlDatabase::addDatabase("QODBC");
+db.setDatabaseName("test");//inserer le nom de la source de données ODBC
+db.setUserName("siwar");//inserer nom de l'utilisateur
+db.setPassword("siwar");//inserer mot de passe de cet utilisateur
 
 if (db.open())
 test=true;
 
-
-
-
-
     return  test;
 }
+void connection::closeconnection(){db.close();}
