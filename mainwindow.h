@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "invites.h"
-
+#include "dialog.h"
+#include "connexion.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,18 +17,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btn_login_clicked();
-
-    void on_ajouterinvite_clicked();
-
-    void on_tableViewInvites_activated(const QModelIndex &index);
-
-    void on_supprimerinvite_clicked();
-
-    void on_modifierinvite_clicked();
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-    invites tmpinvite;
+    Dialog *d;
 };
 #endif // MAINWINDOW_H

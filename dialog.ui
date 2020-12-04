@@ -6,549 +6,773 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>959</width>
-    <height>667</height>
+    <width>930</width>
+    <height>562</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="background1">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
-     <width>961</width>
-     <height>641</height>
+     <y>10</y>
+     <width>931</width>
+     <height>561</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/images/aaa.jpg);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QTabWidget" name="tabWidget_entites">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>140</y>
-     <width>741</width>
-     <height>501</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Blackadder ITC</family>
-     <pointsize>18</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="mouseTracking">
-    <bool>false</bool>
-   </property>
-   <property name="tabletTracking">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 225);
-color: rgb(85, 85, 127);</string>
-   </property>
-   <property name="tabShape">
-    <enum>QTabWidget::Triangular</enum>
+    <string notr="true">gridline-color: rgb(115, 248, 255);
+color: rgb(137, 218, 255);
+background-image: url(:/ressources/drew coffman-unsplash.jpg);
+font: 75 10pt &quot;Trebuchet MS&quot;;
+
+border-bottom-color: rgb(132, 235, 235);
+background-color: rgb(255, 180, 185);</string>
    </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="tab_Promotions">
+   <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>Promotions</string>
+     <string>Personnels</string>
     </attribute>
-    <widget class="QTabWidget" name="tabWidget_promotions">
-     <property name="geometry">
-      <rect>
-       <x>-10</x>
-       <y>0</y>
-       <width>691</width>
-       <height>451</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>MS Sans Serif</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <italic>true</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(71, 142, 255);
-font: italic 12pt &quot;MS Sans Serif&quot;;
-</string>
-     </property>
-     <property name="tabShape">
-      <enum>QTabWidget::Triangular</enum>
-     </property>
-     <property name="currentIndex">
-      <number>1</number>
-     </property>
-     <widget class="QWidget" name="tab_promotions_ajouter">
-      <attribute name="title">
-       <string>Ajouter</string>
-      </attribute>
-      <widget class="QPushButton" name="pushButton__valider_promotions_ajouter">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>330</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Valider</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_mail_promotion">
-       <property name="geometry">
-        <rect>
-         <x>400</x>
-         <y>330</y>
-         <width>41</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/mail2.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QWidget" name="layoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>50</y>
-         <width>381</width>
-         <height>211</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_Promotions_Ajouter">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_ID_promotions_ajouter">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
-          </property>
-          <property name="text">
-           <string>ID</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_ID_promotions_ajouter"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_Nom_promotions_ajouter">
-          <property name="styleSheet">
-           <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Nom</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_Nom_promotions_ajouter"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_pourcentge_promotions_ajouter">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Pourcentage</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_pourcentge_promotions_ajouter"/>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab_promotions_consulter">
-      <attribute name="title">
-       <string>Consulter</string>
-      </attribute>
-      <widget class="QLabel" name="label_liste_promotions_consulter">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>241</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Liste des promotions</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_modifier_promotions_consulter">
-       <property name="geometry">
-        <rect>
-         <x>640</x>
-         <y>100</y>
-         <width>41</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/modifier.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_supprimer_promotions_consulter">
-       <property name="geometry">
-        <rect>
-         <x>640</x>
-         <y>320</y>
-         <width>41</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/supprimer.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QTableView" name="tableView_Promotions_consulter">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>50</y>
-         <width>571</width>
-         <height>361</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_Packs">
-    <attribute name="title">
-     <string>Packs</string>
-    </attribute>
-    <widget class="QTabWidget" name="tabWidget_packs">
+    <widget class="QTabWidget" name="tabWidget_2">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>741</width>
-       <height>451</height>
+       <width>931</width>
+       <height>521</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(71, 142, 255);
-font: italic 12pt &quot;MS Sans Serif&quot;;
-
-
+      <string notr="true">color: rgb(255, 160, 165);
 </string>
      </property>
-     <property name="tabShape">
-      <enum>QTabWidget::Triangular</enum>
-     </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
-     <widget class="QWidget" name="tab_packs_ajouter">
+     <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>Ajouter</string>
+       <string>Consulter la liste des personnels</string>
       </attribute>
-      <widget class="QPushButton" name="pushButton_valider_Packs_ajouter">
+      <widget class="QGraphicsView" name="graphicsView">
        <property name="geometry">
         <rect>
-         <x>220</x>
-         <y>330</y>
-         <width>93</width>
+         <x>710</x>
+         <y>220</y>
+         <width>201</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/ressources/empl.jpg);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifierperso">
+       <property name="geometry">
+        <rect>
+         <x>750</x>
+         <y>120</y>
+         <width>171</width>
          <height>28</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
        </property>
        <property name="text">
-        <string>Valider</string>
+        <string>Modifier </string>
        </property>
       </widget>
-      <widget class="QWidget" name="layoutWidget">
+      <widget class="QPushButton" name="supprimerperso">
        <property name="geometry">
         <rect>
-         <x>30</x>
-         <y>50</y>
-         <width>381</width>
-         <height>201</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_Packs_ajouter">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_ID_Packs_Ajouter">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
-          </property>
-          <property name="text">
-           <string>ID</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_ID_Packs_Ajouter"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_Categorie_Packs_Ajouter">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Categorie</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_Categorie_Packs_Ajouter"/>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_Liste_Packs_Ajouter">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);
-font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Liste</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="lineEdit_Liste_Packs_Ajouter"/>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab_packs_consulter">
-      <attribute name="title">
-       <string>Consulter</string>
-      </attribute>
-      <widget class="QLabel" name="label_liste_packs_consulter">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>201</width>
-         <height>16</height>
+         <x>750</x>
+         <y>70</y>
+         <width>171</width>
+         <height>28</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
        </property>
        <property name="text">
-        <string>Liste des packs</string>
+        <string>Supprimer </string>
        </property>
       </widget>
-      <widget class="QListView" name="listView_packs_consulter">
+      <widget class="QGraphicsView" name="graphicsView_5">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>60</y>
-         <width>421</width>
-         <height>331</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_modifier_packs_consulter">
-       <property name="geometry">
-        <rect>
-         <x>460</x>
-         <y>300</y>
-         <width>31</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/modifier.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_supprimer_packs_consulter">
-       <property name="geometry">
-        <rect>
-         <x>460</x>
-         <y>345</y>
-         <width>31</width>
+         <x>470</x>
+         <y>30</y>
+         <width>41</width>
          <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/supprimer.png);</string>
-       </property>
-       <property name="text">
-        <string/>
+        <string notr="true">border-image: url(:/ressources/business_management_discovery_search_focus_research-512.png);</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_rechercher_packs_consulter">
+      <widget class="QLabel" name="label_suppcin">
        <property name="geometry">
         <rect>
-         <x>480</x>
-         <y>90</y>
-         <width>151</width>
+         <x>750</x>
+         <y>170</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>CIN :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_supp">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>170</y>
+         <width>113</width>
          <height>22</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(74, 74, 74);
+font: 9pt &quot;Snap ITC&quot;;</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
       </widget>
-      <widget class="QLabel" name="label_rechercher_packs_consulter">
+      <widget class="QTableView" name="tablePerso">
        <property name="geometry">
         <rect>
-         <x>650</x>
-         <y>90</y>
-         <width>41</width>
-         <height>21</height>
+         <x>30</x>
+         <y>70</y>
+         <width>651</width>
+         <height>291</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/rechercher.png);</string>
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
        </property>
-       <property name="text">
-        <string/>
+       <property name="sortingEnabled">
+        <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="label_tri_AZ_packs_consulter">
+      <widget class="QLineEdit" name="rechercher">
        <property name="geometry">
         <rect>
-         <x>480</x>
-         <y>60</y>
-         <width>31</width>
-         <height>16</height>
+         <x>520</x>
+         <y>30</y>
+         <width>161</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/tri_AZ.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_tri_ZA_packs_consulter">
-       <property name="geometry">
-        <rect>
-         <x>480</x>
-         <y>120</y>
-         <width>31</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/tri_ZA.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_tri19_packs_consulter">
-       <property name="geometry">
-        <rect>
-         <x>600</x>
-         <y>60</y>
-         <width>31</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/tri_19.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_tri_91_packs_consulter">
-       <property name="geometry">
-        <rect>
-         <x>600</x>
-         <y>120</y>
-         <width>31</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/images/tri_91.png);</string>
-       </property>
-       <property name="text">
-        <string/>
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="tab_packs_statistiques">
+     <widget class="QWidget" name="tab_4">
       <attribute name="title">
-       <string>Statistiques</string>
+       <string>Ajouter un personnel </string>
       </attribute>
+      <widget class="QLabel" name="label_Cin">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>55</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+
+</string>
+       </property>
+       <property name="text">
+        <string>CIN :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_nom">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>100</y>
+         <width>55</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>Nom :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_prenomp">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>140</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>Prenom :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_datenp">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>180</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>Date_de_naissance :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_tel">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>230</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>Tel :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_mail">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>270</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>Mail :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_nbmar">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>310</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>Nb_Mar_Org :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_prenomp">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>140</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_datenp">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>180</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_nomp">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>100</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Cin">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>60</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);
+
+</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_tel">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>230</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_mail">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>270</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_nbmar">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>310</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ajouterperso">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>170</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>Confirmer</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_Ventes">
+   <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>Ventes</string>
+     <string>Tâches</string>
     </attribute>
-    <widget class="QLabel" name="label_liste_Ventes">
+    <widget class="QTabWidget" name="tabWidget_3">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>211</width>
-       <height>21</height>
+       <x>0</x>
+       <y>0</y>
+       <width>931</width>
+       <height>521</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">color: rgb(255, 160, 165);</string>
      </property>
-     <property name="text">
-      <string>Liste des ventes</string>
+     <property name="currentIndex">
+      <number>0</number>
      </property>
-    </widget>
-    <widget class="QListView" name="listView_Ventes">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>701</width>
-       <height>391</height>
-      </rect>
-     </property>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Consulter la liste des tâches </string>
+      </attribute>
+      <widget class="QPushButton" name="modifierTache">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>180</y>
+         <width>161</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>130</y>
+         <width>161</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string> E-mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_suppnomT">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>280</y>
+         <width>61</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+       </property>
+       <property name="text">
+        <string>NomT :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_suppmodT">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>280</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="supprimertache">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>240</y>
+         <width>161</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tableTache">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>581</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="export_excel">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>80</y>
+         <width>161</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>export excel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>Ajouter une tâche</string>
+      </attribute>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>110</y>
+         <width>55</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>NomT:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>160</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>EtatT :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>210</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);
+</string>
+       </property>
+       <property name="text">
+        <string>DateLimiteT :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_NomTache">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>110</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_EtatT">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>160</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_DateLimite">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>210</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ajouter_tache">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>160</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>Confirmer</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>260</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>IDP :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_CinPTache">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>260</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
   </widget>

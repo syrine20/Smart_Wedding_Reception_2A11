@@ -2,8 +2,13 @@
 #define DIALOG_H
 
 #include <QDialog>
+#include "personnel.h"
 #include <QMessageBox>
-#include "promotion.h"
+#include "tache.h"
+#include <QSortFilterProxyModel>
+#include <QTextTableFormat>
+#include <QStandardItemModel>
+#include "exportexcelobject.h"
 
 namespace Ui {
 class Dialog;
@@ -17,18 +22,44 @@ public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+     QSortFilterProxyModel *proxy,*proxyt;
+      Personnel tempPerso;
+      Tache tempTache;
+
+
+     void show_tables();
+     void fill_form(int);
+     void fill_formTache(QString);
+
 private slots:
 
 
-    void on_pushButton__valider_promotions_ajouter_clicked();
+    void on_ajouterperso_clicked();
+
+    void on_supprimerperso_clicked();
+
+    void on_modifierperso_clicked();
+
+    void on_rechercher_textChanged(const QString &arg1);
 
 
 
-    void on_pushButton_supprimer_promotions_consulter_clicked();
+    void on_ajouter_tache_clicked();
+
+    void on_supprimertache_clicked();
+
+    void on_modifierTache_clicked();
+
+    void on_pushButton_10_clicked();
+
+
+    void on_export_excel_clicked();
 
 private:
     Ui::Dialog *ui;
-    promotion tempP;
+
+
+
 };
 
 #endif // DIALOG_H
