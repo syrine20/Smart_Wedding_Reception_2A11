@@ -1,5 +1,9 @@
-QT       += core gui sql multimedia
-
+QT       += core gui multimedia multimediawidgets
+QT        +=sql
+QT       += sql charts
+QT       += widgets
+QT       += serialport
+QT += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -16,20 +20,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
+    ceremonies.cpp \
     connexion.cpp \
     invites.cpp \
     login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    stat.cpp
 
 HEADERS += \
+    arduino.h \
+    ceremonies.h \
     connexion.h \
     invites.h \
     login.h \
-    mainwindow.h
+    mainwindow.h \
+    stat.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    stat.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

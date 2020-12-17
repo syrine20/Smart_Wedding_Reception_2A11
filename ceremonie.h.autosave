@@ -1,5 +1,6 @@
-#ifndef INVITES_H
-#define INVITES_H
+#ifndef CEREMONIE_H
+#define CEREMONIE_H
+
 
 #include <QString>
 #include <QSqlQuery>
@@ -19,10 +20,6 @@ class invites
     bool modifier(int);
     QSqlQueryModel * afficher();
     bool supprimer(int);
-    QSqlQueryModel *recherche(const QString &);
-    QSqlQueryModel * tri_inviDesc(QString);
-    QSqlQueryModel * tri_inviAsc(QString);
-    void pdffonction();
 
 
 
@@ -32,4 +29,4 @@ private:
 
 };
 
-#endif // INVITES_H
+#endif // CEREMONIE_H

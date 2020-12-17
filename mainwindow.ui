@@ -220,21 +220,25 @@
        <string>role</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="login_role">
+     <widget class="QComboBox" name="login_role">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>398</x>
         <y>440</y>
         <width>141</width>
-        <height>41</height>
+        <height>31</height>
        </rect>
       </property>
-      <property name="text">
-       <string>admin</string>
-      </property>
-      <property name="placeholderText">
-       <string>admin</string>
-      </property>
+      <item>
+       <property name="text">
+        <string>GM</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GR</string>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
@@ -291,8 +295,8 @@
        <widget class="QTabWidget" name="tab_Mariage">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>10</y>
+          <x>10</x>
+          <y>20</y>
           <width>851</width>
           <height>521</height>
          </rect>
@@ -338,6 +342,46 @@
              <width>561</width>
              <height>321</height>
             </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Pdf_invitation">
+           <property name="geometry">
+            <rect>
+             <x>650</x>
+             <y>270</y>
+             <width>101</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>MV Boli</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Exporter Pdf</string>
+           </property>
+           <property name="icon">
+            <iconset resource="src.qrc">
+             <normaloff>:/ressource/pdf.png</normaloff>:/ressource/pdf.png</iconset>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>300</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Imprimer</string>
            </property>
           </widget>
          </widget>
@@ -439,7 +483,7 @@ QComboBox::down-arrow
           </item>
           <item>
            <property name="text">
-            <string>ID_INVITATION</string>
+            <string>IDINVI</string>
            </property>
           </item>
           <item>
@@ -482,6 +526,9 @@ QComboBox::down-arrow
             <width>181</width>
             <height>22</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
           </property>
           <property name="placeholderText">
            <string>recherche</string>
@@ -738,6 +785,16 @@ background-color: rgb(209, 209, 209);</string>
           <property name="title">
            <string>listes des  Mariages</string>
           </property>
+          <widget class="QTableView" name="tableViewCerems">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>541</width>
+             <height>271</height>
+            </rect>
+           </property>
+          </widget>
          </widget>
          <widget class="QLabel" name="label_28">
           <property name="geometry">
@@ -769,45 +826,44 @@ background-color: rgb(209, 209, 209);</string>
             <height>22</height>
            </rect>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
           <property name="placeholderText">
            <string>recherche</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="modfprix_2">
+         <widget class="QLineEdit" name="mariage_budget">
           <property name="geometry">
            <rect>
             <x>690</x>
-            <y>280</y>
+            <y>260</y>
             <width>113</width>
             <height>22</height>
            </rect>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
          </widget>
-         <widget class="QLineEdit" name="modnombre_2">
+         <widget class="QLineEdit" name="mariage_code">
           <property name="geometry">
            <rect>
             <x>690</x>
-            <y>170</y>
+            <y>140</y>
             <width>113</width>
             <height>22</height>
            </rect>
           </property>
-         </widget>
-         <widget class="QLineEdit" name="modsurface_2">
-          <property name="geometry">
-           <rect>
-            <x>690</x>
-            <y>240</y>
-            <width>113</width>
-            <height>22</height>
-           </rect>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
           </property>
          </widget>
          <widget class="QPushButton" name="ajouterMariage">
           <property name="geometry">
            <rect>
             <x>650</x>
-            <y>320</y>
+            <y>310</y>
             <width>141</width>
             <height>41</height>
            </rect>
@@ -836,30 +892,17 @@ background-color: rgb(209, 209, 209);</string>
            <bool>true</bool>
           </property>
          </widget>
-         <widget class="QLineEdit" name="modprix_2">
+         <widget class="QLineEdit" name="mariage_nbinvit">
           <property name="geometry">
            <rect>
             <x>690</x>
-            <y>210</y>
+            <y>220</y>
             <width>113</width>
             <height>22</height>
            </rect>
           </property>
-         </widget>
-         <widget class="QLabel" name="label_57">
-          <property name="geometry">
-           <rect>
-            <x>610</x>
-            <y>240</y>
-            <width>51</width>
-            <height>20</height>
-           </rect>
-          </property>
           <property name="styleSheet">
-           <string notr="true">color:black;</string>
-          </property>
-          <property name="text">
-           <string>Date</string>
+           <string notr="true">color: rgb(0, 0, 0);</string>
           </property>
          </widget>
          <widget class="QPushButton" name="btn_triefascMariage">
@@ -886,17 +929,20 @@ background-color: rgb(209, 209, 209);</string>
            <bool>true</bool>
           </property>
          </widget>
-         <widget class="QLineEdit" name="modnom_2">
+         <widget class="QLineEdit" name="mariage_id">
           <property name="geometry">
            <rect>
             <x>690</x>
-            <y>130</y>
+            <y>180</y>
             <width>113</width>
             <height>22</height>
            </rect>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
           <property name="readOnly">
-           <bool>true</bool>
+           <bool>false</bool>
           </property>
          </widget>
          <widget class="QComboBox" name="trie_mariage">
@@ -949,17 +995,22 @@ QComboBox::down-arrow
           </item>
           <item>
            <property name="text">
-            <string>ID</string>
+            <string>CODEMARIAGE</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>NOM</string>
+            <string>IDEMPLACEMENT</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>DATE</string>
+            <string>NBINVITES</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>BUDGET</string>
            </property>
           </item>
          </widget>
@@ -967,7 +1018,7 @@ QComboBox::down-arrow
           <property name="geometry">
            <rect>
             <x>610</x>
-            <y>130</y>
+            <y>180</y>
             <width>81</width>
             <height>20</height>
            </rect>
@@ -1007,7 +1058,7 @@ background-color: rgb(209, 209, 209);</string>
           <property name="geometry">
            <rect>
             <x>610</x>
-            <y>170</y>
+            <y>140</y>
             <width>71</width>
             <height>16</height>
            </rect>
@@ -1023,7 +1074,7 @@ background-color: rgb(209, 209, 209);</string>
           <property name="geometry">
            <rect>
             <x>680</x>
-            <y>361</y>
+            <y>351</y>
             <width>101</width>
             <height>29</height>
            </rect>
@@ -1053,7 +1104,7 @@ background-color: rgb(209, 209, 209);</string>
           <property name="geometry">
            <rect>
             <x>610</x>
-            <y>280</y>
+            <y>260</y>
             <width>61</width>
             <height>20</height>
            </rect>
@@ -1069,7 +1120,7 @@ background-color: rgb(209, 209, 209);</string>
           <property name="geometry">
            <rect>
             <x>680</x>
-            <y>400</y>
+            <y>390</y>
             <width>101</width>
             <height>29</height>
            </rect>
@@ -1099,7 +1150,7 @@ background-color: rgb(209, 209, 209);</string>
           <property name="geometry">
            <rect>
             <x>610</x>
-            <y>210</y>
+            <y>220</y>
             <width>51</width>
             <height>20</height>
            </rect>
@@ -1109,6 +1160,57 @@ background-color: rgb(209, 209, 209);</string>
           </property>
           <property name="text">
            <string>Nb_invites</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ExcelMariage">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>420</y>
+            <width>111</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>ExportToExcel</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/execel.png</normaloff>:/ressource/execel.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>700</x>
+            <y>62</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    color:white;
+    background-color: qlineargradient(x1:0, y1:0, x2:1,y2:1, stop: 1 rgba(228, 41, 81, 100), stop: 0 rgba(234, 107, 101, 100));
+    border-color: rgba(255,255,255,200);
+    border-width: 1px;
+    border-style: solid;
+</string>
+          </property>
+          <property name="text">
+           <string>Statistiques</string>
           </property>
          </widget>
         </widget>

@@ -1,4 +1,9 @@
 #include "invites.h"
+#include <QFile>
+#include <QFileDialog>
+#include <QPrintDialog>
+#include <QPrinter>
+#include <QSystemTrayIcon>
 
 invites::invites()
 {
@@ -62,3 +67,38 @@ bool invites::modifier(int Id_invitation)
     query.bindValue(":prenom", prenom);
     return    query.exec();
 }
+
+QSqlQueryModel * invites::recherche(const QString &rech)
+{
+QSqlQueryModel * model= new QSqlQueryModel();
+model->setQuery("select * from INVITES where (IDINVI LIKE '"+rech+"%' OR NOM LIKE '"+rech+"%' OR PRENOM LIKE '"+rech+"%') ");
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id_invitation"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom "));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+
+return model;
+}
+
+QSqlQueryModel * invites::tri_inviDesc(QString typetri)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from INVITES order by "+typetri+" desc"  );
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id_invitation"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom "));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+return model;
+}
+
+QSqlQueryModel * invites::tri_inviAsc(QString typetri)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+model->setQuery("select * from INVITES order by "+typetri+" asc"  );
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id_invitation"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom "));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+return model;
+}
+
+
