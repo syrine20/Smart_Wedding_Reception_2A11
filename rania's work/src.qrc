@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ressource/add.png</file>
+        <file>ressource/Delete.png</file>
+        <file>ressource/down.png</file>
+        <file>ressource/loop.png</file>
+        <file>ressource/up.png</file>
+        <file>ressource/settings.png</file>
+        <file>ressource/1.jpg</file>
+        <file>ressource/mariage.jpg</file>
+        <file>ressource/ring.png</file>
+        <file>ressource/Click.wav</file>
+        <file>ressource/execel.png</file>
+        <file>ressource/pdf.png</file>
+    </qresource>
+</RCC>
