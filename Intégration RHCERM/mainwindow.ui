@@ -1,0 +1,2270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1084</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>923</width>
+    <height>688</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <kerning>true</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>TheBigDay</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="src.qrc">
+    <normaloff>:/ressource/ring.png</normaloff>:/ressource/ring.png</iconset>
+  </property>
+  <property name="accessibleName">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="pages">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>10</y>
+      <width>1081</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label_LoginPass">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>1081</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/ressource/1.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="src.qrc">:/ressource/1.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_LoginTitre">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Snap ITC</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: rgb(255, 160, 165);
+font: 16pt &quot;Snap ITC&quot;;</string>
+      </property>
+      <property name="text">
+       <string>BIENVENUE</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="login_pass">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>300</y>
+        <width>251</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Snap ITC&quot;;
+
+color: rgb(0, 0, 0);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="login_name">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>200</y>
+        <width>251</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Snap ITC&quot;;
+
+color: rgb(0, 0, 0);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_login">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>430</y>
+        <width>251</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: rgb(255, 160, 165);
+font: 14pt &quot;Snap ITC&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Se CONNECTER</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_loginNom">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>150</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Snap ITC</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+      </property>
+      <property name="text">
+       <string>NOM D'UTILISATEUR</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>260</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Snap ITC</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+      </property>
+      <property name="text">
+       <string>MOT DE PASSE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_login_role">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>370</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Snap ITC</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);
+</string>
+      </property>
+      <property name="text">
+       <string>role</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="login_role">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>360</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Snap ITC&quot;;
+
+color: rgb(0, 0, 0);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Administrateur</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Employée</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>1031</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/ressource/mariage.jpg);
+
+color: rgb(255, 160, 165);
+font: 12pt &quot;Snap ITC&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Se connecter en tant qu' administrateur </string>
+      </property>
+      <widget class="QPushButton" name="RHadmin">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>130</y>
+         <width>221</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>Ressources Humaines</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="CERadmin">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>190</y>
+         <width>221</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>Les cérémonies</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="MarkAdmin">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>250</y>
+         <width>221</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>Le service Marketing </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="OrgAdmin">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>320</y>
+         <width>221</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>L'organisation</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="AlimAdmin">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>390</y>
+         <width>221</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>L'alimentation</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>1041</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/ressource/mariage.jpg);
+color: rgb(255, 160, 165);
+font: 12pt &quot;Snap ITC&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Se connecter en tant qu' employée</string>
+      </property>
+      <widget class="QPushButton" name="CerEmpl">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>130</y>
+         <width>181</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>Les cérémonies</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="OrgEmpl">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>210</y>
+         <width>181</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>L'organisation</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="AlimEmpl">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>290</y>
+         <width>181</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+color: rgb(213, 213, 213);</string>
+       </property>
+       <property name="text">
+        <string>L'alimentation</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="img">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-107</y>
+        <width>1700</width>
+        <height>1241</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="src.qrc">:/ressource/mariage.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="pagesTable">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>1031</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white ; background-color: darkCyan ;background: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_5">
+       <widget class="QTabWidget" name="tab_Mariage">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>861</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Triangular</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_15">
+         <attribute name="title">
+          <string>invites</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_112">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>100</y>
+            <width>791</width>
+            <height>351</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: dark ; background-color: darkCyan ;background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>listes des  invités</string>
+          </property>
+          <widget class="QTableView" name="tableViewInvites">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>561</width>
+             <height>321</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Pdf_invitation">
+           <property name="geometry">
+            <rect>
+             <x>650</x>
+             <y>270</y>
+             <width>101</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>MV Boli</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Exporter Pdf</string>
+           </property>
+           <property name="icon">
+            <iconset resource="src.qrc">
+             <normaloff>:/ressource/pdf.png</normaloff>:/ressource/pdf.png</iconset>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>300</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Imprimer</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="btn_trieDec">
+          <property name="geometry">
+           <rect>
+            <x>282</x>
+            <y>60</y>
+            <width>33</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: green ; background-color: white ;
+background-color: rgb(209, 209, 209);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/down.png</normaloff>:/ressource/down.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_trieAsc">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>60</y>
+            <width>33</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: green ; background-color: white ;
+background-color: rgb(209, 209, 209);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/up.png</normaloff>:/ressource/up.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="trie_invite">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>64</y>
+            <width>137</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox
+{
+    color:white;
+    background-color: qlineargradient(x1:0, y1:0, x2:1,y2:1, stop: 1 rgba(228, 41, 81, 100), stop: 0 rgba(234, 107, 101, 100));
+    border-color: rgba(255,255,255,200);
+    border-width: 1px;
+    border-style: solid;
+}
+
+QComboBox QListView
+{
+    border-style: none;
+    background-color: qlineargradient(x1:0, y1:0, x2:1,y2:0, stop: 1 rgba(228, 41, 81, 100), stop: 0 rgba(234, 107, 101, 100));
+}
+
+QComboBox::drop-down
+{
+    width: 20px;
+    border: 1px;
+    border-color:white;
+    border-left-style:solid;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+QComboBox::down-arrow
+{
+    image: url(C:/Users/SBS/Documents/testqt/Ressources/down.png);
+    width: 16px;
+    height: 16px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>select</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>IDINVI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NOM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>PRENOM</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_27">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>60</y>
+            <width>65</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>trie par :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="recherche_invite">
+          <property name="geometry">
+           <rect>
+            <x>381</x>
+            <y>63</y>
+            <width>181</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="placeholderText">
+           <string>recherche</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_rech_invite">
+          <property name="geometry">
+           <rect>
+            <x>570</x>
+            <y>60</y>
+            <width>33</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: green ; background-color: white ;
+background-color: rgb(209, 209, 209);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/loop.png</normaloff>:/ressource/loop.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ajouterinvite">
+          <property name="geometry">
+           <rect>
+            <x>650</x>
+            <y>250</y>
+            <width>141</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>ajouter</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/add.png</normaloff>:/ressource/add.png</iconset>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_56">
+          <property name="geometry">
+           <rect>
+            <x>620</x>
+            <y>160</y>
+            <width>56</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>nom</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="invi_prenom">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>200</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="invi_id">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>120</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_54">
+          <property name="geometry">
+           <rect>
+            <x>620</x>
+            <y>200</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>prenom</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_49">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>120</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>ID_Invitation</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="invi_nom">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>160</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="modifierinvite">
+          <property name="geometry">
+           <rect>
+            <x>680</x>
+            <y>291</y>
+            <width>101</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>modifier</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/settings.png</normaloff>:/ressource/settings.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="supprimerinvite">
+          <property name="geometry">
+           <rect>
+            <x>680</x>
+            <y>330</y>
+            <width>101</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>supprimer</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/Delete.png</normaloff>:/ressource/Delete.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_16">
+         <attribute name="title">
+          <string>mariages</string>
+         </attribute>
+         <widget class="QPushButton" name="btn_triefdescMariage">
+          <property name="geometry">
+           <rect>
+            <x>282</x>
+            <y>70</y>
+            <width>33</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: green ; background-color: white ;
+background-color: rgb(209, 209, 209);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/down.png</normaloff>:/ressource/down.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_113">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>120</y>
+            <width>581</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: dark ; background-color: darkCyan ;background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>listes des  Mariages</string>
+          </property>
+          <widget class="QTableView" name="tableViewCerems">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>541</width>
+             <height>271</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="label_28">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>70</y>
+            <width>65</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>trie par :</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="recherche_Mariage">
+          <property name="geometry">
+           <rect>
+            <x>381</x>
+            <y>73</y>
+            <width>181</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="placeholderText">
+           <string>recherche</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="mariage_budget">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>260</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="mariage_code">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>140</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ajouterMariage">
+          <property name="geometry">
+           <rect>
+            <x>650</x>
+            <y>310</y>
+            <width>141</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>ajouter</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/add.png</normaloff>:/ressource/add.png</iconset>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="mariage_nbinvit">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>220</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_triefascMariage">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>70</y>
+            <width>33</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: green ; background-color: white ;
+background-color: rgb(209, 209, 209);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/up.png</normaloff>:/ressource/up.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="mariage_id">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>180</y>
+            <width>113</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="trie_mariage">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>74</y>
+            <width>137</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox
+{
+    color:white;
+    background-color: qlineargradient(x1:0, y1:0, x2:1,y2:1, stop: 1 rgba(228, 41, 81, 100), stop: 0 rgba(234, 107, 101, 100));
+    border-color: rgba(255,255,255,200);
+    border-width: 1px;
+    border-style: solid;
+}
+
+QComboBox QListView
+{
+    border-style: none;
+    background-color: qlineargradient(x1:0, y1:0, x2:1,y2:0, stop: 1 rgba(228, 41, 81, 100), stop: 0 rgba(234, 107, 101, 100));
+}
+
+QComboBox::drop-down
+{
+    width: 20px;
+    border: 1px;
+    border-color:white;
+    border-left-style:solid;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+QComboBox::down-arrow
+{
+    image: url(C:/Users/SBS/Documents/testqt/Ressources/down.png);
+    width: 16px;
+    height: 16px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>select</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CODEMARIAGE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>IDEMPLACEMENT</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NBINVITES</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>BUDGET</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_50">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>180</y>
+            <width>81</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>ID_Emplacement</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_rechfMariage">
+          <property name="geometry">
+           <rect>
+            <x>570</x>
+            <y>70</y>
+            <width>33</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: green ; background-color: white ;
+background-color: rgb(209, 209, 209);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/loop.png</normaloff>:/ressource/loop.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_59">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>140</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>Code_Mariage</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="modifierMariage">
+          <property name="geometry">
+           <rect>
+            <x>680</x>
+            <y>351</y>
+            <width>101</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>modifier</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/settings.png</normaloff>:/ressource/settings.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_60">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>260</y>
+            <width>61</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>Budget</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="supprimerMariage">
+          <property name="geometry">
+           <rect>
+            <x>680</x>
+            <y>390</y>
+            <width>101</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>supprimer</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/Delete.png</normaloff>:/ressource/Delete.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_61">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>220</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>Nb_invites</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ExcelMariage">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>420</y>
+            <width>111</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MV Boli</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;</string>
+          </property>
+          <property name="text">
+           <string>ExportToExcel</string>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/execel.png</normaloff>:/ressource/execel.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>700</x>
+            <y>62</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">    color:white;
+    background-color: qlineargradient(x1:0, y1:0, x2:1,y2:1, stop: 1 rgba(228, 41, 81, 100), stop: 0 rgba(234, 107, 101, 100));
+    border-color: rgba(255,255,255,200);
+    border-width: 1px;
+    border-style: solid;
+</string>
+          </property>
+          <property name="text">
+           <string>Statistiques</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_7">
+       <widget class="QTabWidget" name="tabWidgetRH">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>971</width>
+          <height>551</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 153, 207);
+background-image: url(:/ressource/mariage.jpg);
+
+
+font: 10pt &quot;Snap ITC&quot;;</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Personnels</string>
+         </attribute>
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>981</width>
+            <height>521</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(29, 58, 127);
+
+font: 10pt &quot;Snap ITC&quot;;</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string> la liste des personnels</string>
+           </attribute>
+           <widget class="QGraphicsView" name="graphicsView">
+            <property name="geometry">
+             <rect>
+              <x>740</x>
+              <y>230</y>
+              <width>201</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/ressources/empl.jpg);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="modifierperso">
+            <property name="geometry">
+             <rect>
+              <x>750</x>
+              <y>120</y>
+              <width>171</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Modifier </string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="supprimerperso">
+            <property name="geometry">
+             <rect>
+              <x>750</x>
+              <y>70</y>
+              <width>171</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Supprimer </string>
+            </property>
+           </widget>
+           <widget class="QGraphicsView" name="graphicsView_5">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>40</y>
+              <width>41</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/ressources/business_management_discovery_search_focus_research-512.png);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_suppcin">
+            <property name="geometry">
+             <rect>
+              <x>750</x>
+              <y>170</y>
+              <width>51</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(42, 231, 234);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>CIN :</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_supp">
+            <property name="geometry">
+             <rect>
+              <x>810</x>
+              <y>170</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(74, 74, 74);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="maxLength">
+             <number>8</number>
+            </property>
+           </widget>
+           <widget class="QTableView" name="tablePerso">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>90</y>
+              <width>651</width>
+              <height>291</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="rechercher">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>40</y>
+              <width>161</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>Ajouter un personnel </string>
+           </attribute>
+           <widget class="QLabel" name="label_Cin">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>60</y>
+              <width>55</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+
+color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>CIN :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_nom">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>100</y>
+              <width>55</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>Nom :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_prenomp">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>140</y>
+              <width>81</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Prenom :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_datenp">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>180</y>
+              <width>171</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Date_de_naissance :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_tel">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>230</y>
+              <width>51</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>Tel :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_mail">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>270</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Mail :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_nbmar">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>310</y>
+              <width>141</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Nb_Mar_Org :</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_prenomp">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>140</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_datenp">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>180</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_nomp">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>100</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_Cin">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>60</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);
+
+</string>
+            </property>
+            <property name="maxLength">
+             <number>8</number>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_tel">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>230</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+            <property name="maxLength">
+             <number>8</number>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_mail">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>270</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_nbmar">
+            <property name="geometry">
+             <rect>
+              <x>240</x>
+              <y>310</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="ajouterperso">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>170</y>
+              <width>171</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Confirmer</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Tâches</string>
+         </attribute>
+         <widget class="QTabWidget" name="tabWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1051</width>
+            <height>521</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(29, 58, 127);
+
+font: 10pt &quot;Snap ITC&quot;;</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string> la liste des tâches </string>
+           </attribute>
+           <widget class="QPushButton" name="modifierTache">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>180</y>
+              <width>161</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Modifier</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="EmailTache">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>130</y>
+              <width>161</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string> E-mail</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_suppnomT">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>280</y>
+              <width>61</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(42, 231, 234);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>NomT :</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_suppmodT">
+            <property name="geometry">
+             <rect>
+              <x>780</x>
+              <y>280</y>
+              <width>91</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="supprimertache">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>240</y>
+              <width>161</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Supprimer</string>
+            </property>
+           </widget>
+           <widget class="QTableView" name="tableTache">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>70</y>
+              <width>581</width>
+              <height>321</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="export_excel">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>80</y>
+              <width>161</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>export excel</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>Ajouter une tâche</string>
+           </attribute>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>110</y>
+              <width>55</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>NomT:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>160</y>
+              <width>71</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>EtatT :</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>210</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>DateLimiteT :</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_NomTache">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>110</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_EtatT">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>160</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_DateLimite">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>210</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);
+</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="ajouter_tache">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>190</y>
+              <width>111</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Confirmer</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>260</y>
+              <width>71</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+            </property>
+            <property name="text">
+             <string>IDP :</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_CinPTache">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>260</y>
+              <width>113</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+font: 8pt &quot;Snap ITC&quot;;
+
+color: rgb(56, 181, 200);</string>
+            </property>
+            <property name="maxLength">
+             <number>8</number>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_7">
+         <attribute name="title">
+          <string>Capteur de gaz</string>
+         </attribute>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>210</y>
+            <width>281</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color : rgb(255, 84, 130);
+font: 9pt &quot;Snap ITC&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Etat de buzzer et led rouge :</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ON">
+          <property name="geometry">
+           <rect>
+            <x>710</x>
+            <y>210</y>
+            <width>93</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 231, 234);
+font: 9pt &quot;Snap ITC&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ON</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="OFF">
+          <property name="geometry">
+           <rect>
+            <x>850</x>
+            <y>210</y>
+            <width>93</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 231, 234);
+font: 9pt &quot;Snap ITC&quot;;
+</string>
+          </property>
+          <property name="text">
+           <string>OFF</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_6"/>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1084</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>

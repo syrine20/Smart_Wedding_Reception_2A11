@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ressources/per.jpg</file>
+        <file>ressources/empl.jpg</file>
+        <file>ressources/150-1507122_deep-pink-check-mark-11-icon-check-mark-icon-pink.png</file>
+        <file>ressources/business_management_discovery_search_focus_research-512.png</file>
+        <file>ressources/téléchargement (2).png</file>
+        <file>ressources/drew coffman-unsplash.jpg</file>
+        <file>ressources/mains-couples.jpg</file>
+        <file>ressources/personnel.png</file>
+        <file>ressources/40b14fce404c7918176a2b25fae568b6-1551962235.jpg</file>
+        <file>ressources/téléchargement.png</file>
+    </qresource>
+</RCC>

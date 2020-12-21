@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ressource/add.png</file>
+        <file>ressource/Delete.png</file>
+        <file>ressource/down.png</file>
+        <file>ressource/loop.png</file>
+        <file>ressource/up.png</file>
+        <file>ressource/settings.png</file>
+        <file>ressource/1.jpg</file>
+        <file>ressource/mariage.jpg</file>
+        <file>ressource/ring.png</file>
+        <file>ressource/Click.wav</file>
+        <file>ressource/execel.png</file>
+        <file>ressource/pdf.png</file>
+        <file>ressources/business_management_discovery_search_focus_research-512.png</file>
+        <file>ressources/empl.jpg</file>
+        <file>ressources/mar.jpg</file>
+    </qresource>
+</RCC>

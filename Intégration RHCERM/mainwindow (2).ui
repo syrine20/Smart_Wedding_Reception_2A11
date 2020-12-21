@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>50</y>
+      <width>601</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: italic 18pt &quot;Monotype Corsiva&quot;;
+background-image: url(:/ressources/drew coffman-unsplash.jpg);
+color : rgb(149, 0, 0);</string>
+    </property>
+    <property name="title">
+     <string>The Big Day</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>70</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bienvenue</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Id_Utilis">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>150</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color :rgb(0, 0, 113);
+font: 63 italic 10pt &quot;Lucida Bright&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Id_Utilisateur :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_MotDp">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>230</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color :rgb(0, 0, 113);
+font: 63 italic 10pt &quot;Lucida Bright&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Mot_De_Passe:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>320</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Se connecter</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Id_Utilis">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>150</y>
+       <width>113</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: italic 14pt &quot;Monotype Corsiva&quot;;
+color : rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_MotDP">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>230</y>
+       <width>113</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: italic 14pt &quot;Monotype Corsiva&quot;;
+color : rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
