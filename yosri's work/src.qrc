@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/SRC">
+        <file>resources/logo.png</file>
+        <file>resources/wedding-cake.png</file>
+        <file>resources/pastries patt.jpg</file>
+        <file>resources/trier_button.png</file>
+        <file>resources/up.png</file>
+        <file>resources/down.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>resources/wedback.jpg</file>
+        <file>../../../Downloads/leftwards-black-arrow-emoji-by-twitter.png</file>
+    </qresource>
+</RCC>
