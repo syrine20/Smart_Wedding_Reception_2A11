@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>modifier.png</file>
+        <file>supprimer.png</file>
+        <file>rechercher.png</file>
+        <file>tri_19.png</file>
+        <file>tri_91.png</file>
+        <file>tri_AZ.png</file>
+        <file>tri_ZA.png</file>
+        <file>mail.png</file>
+        <file>mail2.png</file>
+        <file>aaa.jpg</file>
+        <file>mmm.jpg</file>
+        <file>button.mp3</file>
+        <file>back.mp3</file>
+        <file>imprimer.png</file>
+        <file>pdf_i.png</file>
+    </qresource>
+    <qresource prefix="/sound"/>
+</RCC>
