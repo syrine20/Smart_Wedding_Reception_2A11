@@ -23,19 +23,25 @@ SOURCES += \
     arduino.cpp \
     ceremonies.cpp \
     connexion.cpp \
+    decorateur.cpp \
     invites.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    salle.cpp \
+    smtp.cpp \
     stat.cpp
 
 HEADERS += \
     arduino.h \
     ceremonies.h \
     connexion.h \
+    decorateur.h \
     invites.h \
     login.h \
     mainwindow.h \
+    salle.h \
+    smtp.h \
     stat.h
 
 FORMS += \
