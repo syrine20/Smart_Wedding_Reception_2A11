@@ -1,0 +1,17 @@
+INPUT(
+./debug\arduino.o
+./debug\ceremonies.o
+./debug\connexion.o
+./debug\decorateur.o
+./debug\invites.o
+./debug\login.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\salle.o
+./debug\smtp.o
+./debug\stat.o
+./debug\qrc_src.o
+./debug\moc_mainwindow.o
+./debug\moc_smtp.o
+./debug\moc_stat.o
+);
