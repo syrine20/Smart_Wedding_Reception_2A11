@@ -856,33 +856,33 @@ public:
         label_11 = new QLabel(page_4);
         label_11->setObjectName(QStringLiteral("label_11"));
         label_11->setGeometry(QRect(310, 150, 141, 16));
-        label_11->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_11->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_10 = new QLabel(page_4);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(310, 220, 121, 16));
-        label_10->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_10->setGeometry(QRect(310, 220, 141, 16));
+        label_10->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_13 = new QLabel(page_4);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(310, 280, 141, 16));
-        label_13->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_13->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_53 = new QLabel(page_4);
         label_53->setObjectName(QStringLiteral("label_53"));
-        label_53->setGeometry(QRect(310, 350, 201, 16));
-        label_53->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_53->setGeometry(QRect(290, 350, 211, 16));
+        label_53->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_55 = new QLabel(page_4);
         label_55->setObjectName(QStringLiteral("label_55"));
         label_55->setGeometry(QRect(310, 410, 161, 16));
-        label_55->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_55->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_57 = new QLabel(page_4);
         label_57->setObjectName(QStringLiteral("label_57"));
         label_57->setGeometry(QRect(310, 470, 151, 16));
-        label_57->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_57->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         ajouter_decorateur_2 = new QPushButton(page_4);
         ajouter_decorateur_2->setObjectName(QStringLiteral("ajouter_decorateur_2"));
         ajouter_decorateur_2->setGeometry(QRect(740, 570, 75, 23));
@@ -915,23 +915,23 @@ public:
         label_16 = new QLabel(page_8);
         label_16->setObjectName(QStringLiteral("label_16"));
         label_16->setGeometry(QRect(340, 180, 101, 16));
-        label_16->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_16->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_15 = new QLabel(page_8);
         label_15->setObjectName(QStringLiteral("label_15"));
         label_15->setGeometry(QRect(340, 250, 101, 16));
-        label_15->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_15->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_17 = new QLabel(page_8);
         label_17->setObjectName(QStringLiteral("label_17"));
-        label_17->setGeometry(QRect(340, 280, 91, 71));
-        label_17->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_17->setGeometry(QRect(340, 300, 141, 31));
+        label_17->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_18 = new QLabel(page_8);
         label_18->setObjectName(QStringLiteral("label_18"));
         label_18->setGeometry(QRect(340, 360, 141, 31));
-        label_18->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_18->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         ajoutersalle = new QPushButton(page_8);
         ajoutersalle->setObjectName(QStringLiteral("ajoutersalle"));
         ajoutersalle->setGeometry(QRect(790, 580, 61, 21));
@@ -1086,7 +1086,7 @@ public:
         label_58 = new QLabel(page_10);
         label_58->setObjectName(QStringLiteral("label_58"));
         label_58->setGeometry(QRect(750, 160, 81, 21));
-        label_58->setStyleSheet(QLatin1String("color:rgb(112, 0, 0);\n"
+        label_58->setStyleSheet(QLatin1String("color:rgb(21, 24, 91);\n"
 "font: 75 16pt \"Segoe Script\";"));
         trie_capacite_2 = new QPushButton(page_10);
         trie_capacite_2->setObjectName(QStringLiteral("trie_capacite_2"));
@@ -1113,7 +1113,7 @@ public:
         label_46 = new QLabel(page_10);
         label_46->setObjectName(QStringLiteral("label_46"));
         label_46->setGeometry(QRect(750, 330, 47, 14));
-        label_46->setStyleSheet(QLatin1String("color:rgb(112, 0, 0);\n"
+        label_46->setStyleSheet(QLatin1String("color:rgb(255, 255, 255);\n"
 "font: 75 16pt \"Segoe Script\";"));
         suppression_salle = new QPushButton(page_10);
         suppression_salle->setObjectName(QStringLiteral("suppression_salle"));
@@ -1435,23 +1435,24 @@ public:
         label_24 = new QLabel(page_14);
         label_24->setObjectName(QStringLiteral("label_24"));
         label_24->setGeometry(QRect(390, 340, 191, 16));
-        label_24->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_24->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_25 = new QLabel(page_14);
         label_25->setObjectName(QStringLiteral("label_25"));
-        label_25->setGeometry(QRect(350, 410, 241, 16));
-        label_25->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_25->setGeometry(QRect(320, 410, 281, 16));
+        label_25->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_26 = new QLabel(page_14);
         label_26->setObjectName(QStringLiteral("label_26"));
         label_26->setGeometry(QRect(390, 480, 191, 16));
-        label_26->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_26->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";"));
         label_31 = new QLabel(page_14);
         label_31->setObjectName(QStringLiteral("label_31"));
         label_31->setGeometry(QRect(390, 540, 181, 16));
-        label_31->setStyleSheet(QLatin1String("color: rgb(0, 0, 0);\n"
-"font: 87 8pt \"Arial Black\";"));
+        label_31->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"font: 87 9pt \"Arial Black\";\n"
+""));
         okkkkk = new QPushButton(page_14);
         okkkkk->setObjectName(QStringLiteral("okkkkk"));
         okkkkk->setGeometry(QRect(780, 590, 61, 21));
@@ -1523,7 +1524,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        pages->setCurrentIndex(15);
+        pages->setCurrentIndex(8);
         btn_login->setDefault(false);
         pagesTable->setCurrentIndex(0);
         tab_Mariage->setCurrentIndex(1);

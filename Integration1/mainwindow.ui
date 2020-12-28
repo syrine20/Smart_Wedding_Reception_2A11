@@ -39,7 +39,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>13</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="menu">
      <widget class="QLabel" name="label_LoginPass">
@@ -1777,8 +1777,8 @@ color: rgb(0, 0, 0);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>ID de décorateur</string>
@@ -1789,13 +1789,13 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        <rect>
         <x>310</x>
         <y>220</y>
-        <width>121</width>
+        <width>141</width>
         <height>16</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>Nom de décorateur</string>
@@ -1811,8 +1811,8 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>Style de décorateur</string>
@@ -1821,15 +1821,15 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
      <widget class="QLabel" name="label_53">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>290</x>
         <y>350</y>
-        <width>201</width>
+        <width>211</width>
         <height>16</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>num_telephone de décorateur</string>
@@ -1845,8 +1845,8 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>email de décorateur</string>
@@ -1862,8 +1862,8 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>Lieu de décorateur</string>
@@ -1961,8 +1961,8 @@ font: 75 29pt &quot;Segoe Script&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>ID de la salle</string>
@@ -1978,8 +1978,8 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>lieu de la salle</string>
@@ -1989,14 +1989,14 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>280</y>
-        <width>91</width>
-        <height>71</height>
+        <y>300</y>
+        <width>141</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>prix de la salle</string>
@@ -2012,8 +2012,8 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>capacité de la salle</string>
@@ -2509,7 +2509,7 @@ font: 75 12pt &quot;Segoe Script&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:rgb(112, 0, 0);
+       <string notr="true">color:rgb(21, 24, 91);
 font: 75 16pt &quot;Segoe Script&quot;;</string>
       </property>
       <property name="text">
@@ -2619,7 +2619,7 @@ color: rgb(0, 0, 0);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:rgb(112, 0, 0);
+       <string notr="true">color:rgb(255, 255, 255);
 font: 75 16pt &quot;Segoe Script&quot;;</string>
       </property>
       <property name="text">
@@ -3614,8 +3614,8 @@ font: 87 9pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>Style de nouveau décorateur</string>
@@ -3624,15 +3624,15 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
      <widget class="QLabel" name="label_25">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>320</x>
         <y>410</y>
-        <width>241</width>
+        <width>281</width>
         <height>16</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>Num_télephone de nouveau décorateur</string>
@@ -3648,8 +3648,8 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
       </property>
       <property name="text">
        <string>Email de nouveau décorateur</string>
@@ -3665,8 +3665,9 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 87 8pt &quot;Arial Black&quot;;</string>
+       <string notr="true">color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;
+</string>
       </property>
       <property name="text">
        <string>Lieu de nouveau décorateur</string>

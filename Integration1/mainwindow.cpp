@@ -55,22 +55,22 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tablesalle->setModel(stmp.afficher());
     ui->tabledeco->setModel(dtmp.afficher());
     //photo on pushbutton
-    ui->trie_prix->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/money.jpg"));
-    ui->trie_capacite_2->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/capacite.jpg"));
-     ui->suppression_salle->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/poubelle.jpg"));
-     ui->salle_email->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/update.jpg"));
-     ui->supprimer_deco->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/poubelle.jpg"));
-      ui->update_s->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/update.jpg"));
-      ui->suppression_a->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/mail.jpg"));
-       ui->reserver_salle->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/reserver.jpg"));
-         ui->recherche_deco->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/cherr.jpg"));
-       ui->trie_id->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/id.jpg"));
-       ui->trie_lieu->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/loca.jpg"));
-          ui->a_retour->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/retour.jpg"));
-          ui->style_recherche->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/style.jpg"));
-           ui->idd_recherche->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/id.jpg"));
-           ui->lieu_recherche_2->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/loca.jpg"));
-           ui->backk->setIcon(QIcon("C:/Users/ASUS/Documents/Organisation/resource/retour.jpg"));
+    ui->trie_prix->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/money.jpg"));
+    ui->trie_capacite_2->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/capacite.jpg"));
+     ui->suppression_salle->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/poubelle.jpg"));
+     ui->salle_email->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/update.jpg"));
+     ui->supprimer_deco->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/poubelle.jpg"));
+      ui->update_s->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/update.jpg"));
+      ui->suppression_a->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/mail.jpg"));
+       ui->reserver_salle->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/reserver.jpg"));
+         ui->recherche_deco->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/cherr.jpg"));
+       ui->trie_id->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/id.jpg"));
+       ui->trie_lieu->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/loca.jpg"));
+          ui->a_retour->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/retour.jpg"));
+          ui->style_recherche->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/style.jpg"));
+           ui->idd_recherche->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/id.jpg"));
+           ui->lieu_recherche_2->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/loca.jpg"));
+           ui->backk->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/retour.jpg"));
            //controle de saisie
         ui->lineEdit_7->setValidator(new QIntValidator (0,99999999));
         ui->lineEdit_18->setValidator(new QIntValidator (0,99999999));
@@ -82,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
        connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
        //song
        player= new QMediaPlayer(this) ;
-       player->setMedia(QUrl::fromLocalFile("C:/Users/ASUS/Documents/Organisation/resource/")) ;
+       player->setMedia(QUrl::fromLocalFile("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/")) ;
        player->play() ;
 
 
