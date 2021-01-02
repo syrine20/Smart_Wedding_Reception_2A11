@@ -21,28 +21,36 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     arduino.cpp \
+    article.cpp \
     ceremonies.cpp \
+    commande.cpp \
     connexion.cpp \
     decorateur.cpp \
     invites.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    patisserie.cpp \
     salle.cpp \
     smtp.cpp \
-    stat.cpp
+    stat.cpp \
+    traiteur.cpp
 
 HEADERS += \
     arduino.h \
+    article.h \
     ceremonies.h \
+    commande.h \
     connexion.h \
     decorateur.h \
     invites.h \
     login.h \
     mainwindow.h \
+    patisserie.h \
     salle.h \
     smtp.h \
-    stat.h
+    stat.h \
+    traiteur.h
 
 FORMS += \
     mainwindow.ui \

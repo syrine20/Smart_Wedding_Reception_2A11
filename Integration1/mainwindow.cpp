@@ -40,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
+    rl=0;
     /*int ret=A.connect_arduino();//lancer la cnx a arduino
     switch(ret)
     {case(0):qDebug()<<"arduino is available and connected to :"<<A.getarduino_port_name();
@@ -51,8 +51,10 @@ MainWindow::MainWindow(QWidget *parent)
     }
     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));*/
 
-
     ui->tablesalle->setModel(stmp.afficher());
+    ui->TablePatiss->setModel(tempPatiss.afficher());
+    ui->TableTrait->setModel(tempTrait.afficher());
+    ui->tableart->setModel(tempArt.afficher());
     ui->tabledeco->setModel(dtmp.afficher());
     //photo on pushbutton
     ui->trie_prix->setIcon(QIcon("C:/Users/ASUS/Desktop/syrine_Smart_Wedding_Reception_2A11/Integration1/ressource/money.jpg"));
@@ -1186,6 +1188,7 @@ void MainWindow::on_backk_toggled(bool a)
     }
 }
 
+
 void MainWindow::on_organisation_3_clicked()
 {
     ui->pages->setCurrentIndex(4);
@@ -1194,4 +1197,512 @@ void MainWindow::on_organisation_3_clicked()
 void MainWindow::on_organisation_2_clicked()
 {
     ui->pages->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->pages->setCurrentIndex(15);
+}
+
+void MainWindow::on_toolButton_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/ghaba/Desktop/git 2/Smart_Wedding_Reception_2A11/Integration1/ressource/Click.WAV"));
+       player->play();
+       qDebug()<< player->errorString();
+       QString nom=ui->lineEdit->text();
+       QString id=ui->lineEdit_2->text();
+       float echelle=ui->lineEdit_14->text().toFloat();
+       //long nb=ui->lineEdit_4->text().toInt();
+       QString adr=ui->lineEdit_15->text();
+       QString mail=ui->lineEdit_15->text();
+       patisserie p(nom,id,echelle,0,adr,mail);
+       bool test=p.ajouter();
+        if(test){
+
+            QMessageBox::information(nullptr,"ajout patisserie","Patisserie ajoutée avec succes.");
+        }
+        else QMessageBox::warning(nullptr,"ajout patisserie","Patisserie non ajoutée.");
+        ui->TablePatiss->setModel(tempPatiss.afficher());
+}
+
+void MainWindow::on_alimentation_2_clicked()
+{
+    ui->pages->setCurrentIndex(1);
+    ui->TablePatiss->setModel(tempPatiss.afficher());
+    rl=2;//connecté en tant qu'employé
+}
+
+void MainWindow::on_alimentation_3_clicked()
+{
+    ui->pages->setCurrentIndex(1);
+    ui->TablePatiss->setModel(tempPatiss.afficher());
+    rl=1;//connecté en tant qu'admin
+}
+
+void MainWindow::on_toolButton_4_clicked()
+{
+    if(rl==1)
+    ui->pages->setCurrentIndex(15);//admin
+    else if (rl==2)
+    ui->pages->setCurrentIndex(3);//employé
+}
+
+
+
+void MainWindow::on_toolButton_2_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/ghaba/Downloads/click.wav"));
+        player->play();
+        qDebug()<< player->errorString();
+     QString i = ui->lineEdit_2->text();
+     bool test = tempPatiss.supprimer(i);
+     if (i=="")
+         test=false;
+     if(test){
+         ui->TablePatiss->setModel(tempPatiss.afficher());
+         QMessageBox::information(nullptr,"supression patisserie","Patisserie supprimée avec succes.");
+
+     }
+     else QMessageBox::warning(nullptr,"supression patisserie","Patisserie non supprimée.");
+}
+
+void MainWindow::on_TablePatiss_activated(const QModelIndex &index)
+{
+    QString val = ui->TablePatiss->model()->data(index).toString();
+            //int n=ui->tableView->model()->data(index).toInt();
+            /*
+            QString search=ui->lindedit->text().toString;
+
+             */
+            QSqlQuery query,quer;
+             query.prepare("select * from patisseries where NOMPATISS=:id or IDPATISS=:id  or ADRESSE=:id or EMAIL=:id");
+             //quer.prepare("select * from patisseries where ECHELLE_QUAL=:n or NBPRVENDUS=:n");
+             query.bindValue(":id",val);
+             //
+             //query.bindValue(":n",n);
+            if (query.exec())
+            {
+
+                while (query.next())
+                {
+                    ui->lineEdit->setText(query.value(0).toString());
+                    ui->lineEdit_2->setText(query.value(1).toString());
+                    ui->lineEdit_14->setText(query.value(2).toString());
+                    ui->lineEdit_15->setText(query.value(4).toString());
+                    ui->lineEdit_20->setText(query.value(5).toString());
+
+                }
+
+            }
+            else
+            {
+                QMessageBox::critical(nullptr,QObject::tr("error \n"),QObject::tr("de selection"));
+            }
+}
+
+
+
+void MainWindow::on_toolButton_3_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/ghaba/Downloads/click.wav"));
+       player->play();
+       qDebug()<< player->errorString();
+       QString nom= ui->lineEdit->text();  //lineEdit_nouv_nom
+               QString id = ui->lineEdit_2->text(); //lineEdit_id_eventmodif
+               int ech=ui->lineEdit_14->text().toInt(); //lineEdit_nouv_idsalle
+               QString adr=ui->lineEdit_15->text();
+               QString mail=ui->lineEdit_20->text();
+               patisserie p(nom,id,ech,0,adr,mail);
+                bool test=p.modifier(nom,id,ech,adr,mail);
+               if(test)
+               {
+                   ui->TablePatiss->setModel(tempPatiss.afficher());//refresh
+                   QMessageBox::information(nullptr, QObject::tr("Modifier une patisserie!"),
+                                            QObject::tr(" patisserie modifiée ! \n"
+                                                        "Click Cancel to exit."), QMessageBox::Cancel);
+               }
+
+               else {
+
+                   QMessageBox::critical(nullptr, QObject::tr("Modifier une patisserie"),
+                                         QObject::tr("Erreur !.\n"
+                                                     "Click Cancel to exit."), QMessageBox::Cancel);
+               }
+}
+
+void MainWindow::on_toolButton_5_clicked()
+{
+    ui->pages->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->pages->setCurrentIndex(16);
+    ui->TableTrait->setModel(tempTrait.afficher());
+}
+
+void MainWindow::on_toolButton_6_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/ghaba/Downloads/click.wav"));
+       player->play();
+       qDebug()<< player->errorString();
+       QString nom=ui->nomtrait->text();
+       QString id=ui->idtrait->text();
+       QString mail=ui->mailtrait->text();
+       int com=ui->comission->text().toInt();
+       traiteur t(nom,id,mail,com);
+       bool test=t.ajouter();
+       if(test){
+           ui->TableTrait->setModel(tempTrait.afficher());
+           QMessageBox::information(nullptr,"ajout traiteur","traiteur ajouté avec succes.");
+       }
+       else QMessageBox::warning(nullptr,"ajout traiteur","traiteur non ajouté.");
+}
+
+void MainWindow::on_toolButton_7_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/ghaba/Downloads/click.wav"));
+        player->play();
+        qDebug()<< player->errorString();
+        QString i = ui->idtrait->text();
+        bool test = tempTrait.supprimer(i);
+
+        if (i=="")
+            test=false;
+        if(test){
+            ui->TableTrait->setModel(tempTrait.afficher());
+            QMessageBox::information(nullptr,"supression traiteur","traiteur supprimée avec succes.");
+
+        }
+        else QMessageBox::warning(nullptr,"supression traiteur","traiteur non supprimée.");
+}
+
+void MainWindow::on_toolButton_8_clicked()
+{
+    player->setMedia(QUrl::fromLocalFile("C:/Users/ghaba/Downloads/click.wav"));
+        player->play();
+        qDebug()<< player->errorString();
+                QString nom= ui->nomtrait->text();  //lineEdit_nouv_nom
+                QString id = ui->idtrait->text(); //lineEdit_id_eventmodif
+                QString email=ui->mailtrait->text();
+                int comission=ui->comission->text().toInt();
+               traiteur t(nom,id,email,comission);
+               QSqlQuery quer;
+               QString tempId=t.getid();
+               bool test=t.modifier();
+                if(test)
+                {
+                    ui->TableTrait->setModel(tempTrait.afficher());//refresh
+                    QMessageBox::information(nullptr, QObject::tr("Modifier une patisserie!"),
+                                             QObject::tr(" patisserie modifiée ! \n"
+                                                         "Click Cancel to exit."), QMessageBox::Cancel);
+                }
+
+                else {
+
+                    QMessageBox::critical(nullptr, QObject::tr("Modifier une patisserie"),
+                                          QObject::tr("Erreur !.\n"
+                                                      "Click Cancel to exit."), QMessageBox::Cancel);
+                }
+
+
+}
+
+
+void MainWindow::on_search_textChanged(const QString &arg1)
+{
+    QString src=ui->search->text();
+        QSqlQuery * query=new QSqlQuery;
+        query->prepare("SELECT * FROM TRAITEURS WHERE NOM=:src OR ID=:src OR EMAIL=:src");
+        query->bindValue(":src",src);
+        QSqlQueryModel * model= new QSqlQueryModel;
+        if (query->exec() and src!=""){
+        model->setQuery(*query);
+        model->setHeaderData(0,Qt::Horizontal,"nom");
+        model->setHeaderData(1,Qt::Horizontal,"id");
+        model->setHeaderData(2,Qt::Horizontal,"email");
+        model->setHeaderData(3,Qt::Horizontal,"comission");
+        ui->TableTrait->setModel(model);
+        tempTrait.afficher();
+        }
+     else if(src=="") ui->TableTrait->setModel(tempTrait.afficher());
+}
+void MainWindow::exporter(){
+    QString strStream;
+                QTextStream out(&strStream);
+
+                 const int rowCount = ui->TablePatiss->model()->rowCount();
+                 const int columnCount = ui->TablePatiss->model()->columnCount();
+                out <<  "<html>\n"
+                "<head>\n"
+                                 "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                                 <<  QString("<title>%1</title>\n").arg("strTitle")
+                                 <<  "</head>\n"
+                                 "<body bgcolor=#ffffff link=#5000A0>\n"
+
+                                //     "<align='right'> " << datefich << "</align>"
+                                 "<center> <H1>Liste des patisseries </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+
+                             // headers
+                             out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
+                             out<<"<cellspacing=10 cellpadding=3>";
+                             for (int column = 0; column < columnCount; column++)
+                                 if (!ui->TablePatiss->isColumnHidden(column))
+                                     out << QString("<th>%1</th>").arg(ui->TablePatiss->model()->headerData(column, Qt::Horizontal).toString());
+                             out << "</tr></thead>\n";
+
+                             // data table
+                             for (int row = 0; row < rowCount; row++) {
+                                 out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
+                                 for (int column = 0; column < columnCount; column++) {
+                                     if (!ui->TablePatiss->isColumnHidden(column)) {
+                                         QString data = ui->TablePatiss->model()->data(ui->TablePatiss->model()->index(row, column)).toString().simplified();
+                                         out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                                     }
+                                 }
+                                 out << "</tr>\n";
+                             }
+                             out <<  "</table> </center>\n"
+                                 "</body>\n"
+                                 "</html>\n";
+
+                       QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
+                         if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+
+                        QPrinter printer (QPrinter::PrinterResolution);
+                         printer.setOutputFormat(QPrinter::PdfFormat);
+                        printer.setPaperSize(QPrinter::A4);
+                       printer.setOutputFileName(fileName);
+
+                        QTextDocument doc;
+                         doc.setHtml(strStream);
+                         doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+                         doc.print(&printer);
+}
+
+void MainWindow::print(){
+    QPrinter printer;
+    printer.setPrinterName("desiered printer name");
+    QPrintDialog dialog(&printer,this);
+    if(dialog.exec()== QDialog::Rejected)
+                   return;
+}
+
+void MainWindow::on_toolButton_9_clicked()
+{
+    ui->TablePatiss->setModel(tempPatiss.trierA());
+}
+
+void MainWindow::on_toolButton_10_clicked()
+{
+    ui->TablePatiss->setModel(tempPatiss.trierB());
+
+}
+
+void MainWindow::on_toolButton_13_clicked()
+{
+    exporter();
+}
+
+void MainWindow::on_toolButton_14_clicked()
+{
+    print();
+}
+
+void MainWindow::on_toolButton_16_clicked()
+{
+    ui->pages->setCurrentIndex(1);
+}
+
+void MainWindow::on_toolButton_15_clicked()
+{
+    ui->pages->setCurrentIndex(17);
+    ui->tableart->setModel(tempArt.afficher());
+}
+
+void MainWindow::on_toolButton_17_clicked()
+{
+    ui->pages->setCurrentIndex(16);
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    ui->pages->setCurrentIndex(18);
+    ui->tablecmd->setModel(tempCmd.afficher());
+    QSqlQuery *q=new QSqlQuery;
+    QSqlQueryModel * model=new QSqlQueryModel;
+    q->prepare("SELECT ID FROM TRAITEURS");
+     q->exec();
+    model->setQuery(*q);
+    ui->trait->setModel(model);
+    QSqlQuery *q1=new QSqlQuery;
+    QSqlQueryModel * model1=new QSqlQueryModel;
+    q1->prepare("SELECT IDART FROM ARTICLES");
+     q1->exec();
+    model1->setQuery(*q1);
+    ui->art->setModel(model1);
+}
+
+void MainWindow::on_TableTrait_activated(const QModelIndex &index)
+{
+    QString val = ui->TableTrait->model()->data(index).toString();
+        //int n=ui->tableView->model()->data(index).toInt();
+        /*
+        QString search=ui->lindedit->text().toString;
+
+         */
+        QSqlQuery query,quer;
+         query.prepare("select * from traiteurs where NOM=:id or ID=:id  or EMAIL=:id");
+         //quer.prepare("select * from patisseries where ECHELLE_QUAL=:n or NBPRVENDUS=:n");
+         query.bindValue(":id",val);
+         //
+         //query.bindValue(":n",n);
+        if (query.exec())
+        {
+
+            while (query.next())
+            {
+                ui->nomtrait->setText(query.value(0).toString());
+                ui->idtrait->setText(query.value(1).toString());
+                ui->mailtrait->setText(query.value(2).toString());
+                ui->comission->setText(query.value(3).toString());
+
+            }
+
+        }
+        else
+        {
+            QMessageBox::critical(nullptr,QObject::tr("error \n"),QObject::tr("de selection"));
+        }
+
+}
+
+void MainWindow::on_ajoutart_clicked()
+{
+    QString id,nm,type;
+       int qte,pu;
+       id=ui->idart->text();
+       nm=ui->nomart->text();
+       type=ui->type->currentText();
+       qte=ui->qte->text().toInt();
+       pu=ui->pu->text().toInt();
+       article art(id,nm,type,qte,pu);
+       art.ajouter();
+       ui->tableart->setModel(tempArt.afficher());
+}
+
+void MainWindow::on_suppart_clicked()
+{
+    //supression article
+    QString id=ui->idart->text();
+    article art;
+    bool test=art.supprimer(id);
+    if (test){
+        ui->tableart->setModel(tempArt.afficher());
+        QMessageBox::information(nullptr, QObject::tr("Supprimer un article!"),
+                                 QObject::tr(" Article supprimé ! \n"
+                                             "Click Cancel to exit."), QMessageBox::Cancel);
+            }
+    else {
+        QMessageBox::critical(nullptr, QObject::tr("Supprimer un article"),
+                              QObject::tr("Erreur !.\n"
+                                          "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+
+
+}
+
+void MainWindow::on_modifart_clicked()
+{
+    //modification article
+    QString id=ui->idart->text();
+    QString nom=ui->nomart->text();
+    int qte=ui->qte->text().toInt();
+    int pu=ui->pu->text().toInt();
+    QString type=ui->type->currentText();
+    article art(nom,id,type,qte,pu);
+    bool test=art.modifier(art.getidart(),art.getnomart(),art.gettype(),art.getqte(),art.getpu());
+    if (test){
+        ui->tableart->setModel(tempArt.afficher());
+        QMessageBox::information(nullptr, QObject::tr("Modfier un article!"),
+                                 QObject::tr(" Article modifié ! \n"
+                                             "Click Cancel to exit."), QMessageBox::Cancel);
+            }
+    else {
+        QMessageBox::critical(nullptr, QObject::tr("Modifier un article"),
+                              QObject::tr("Erreur !.\n"
+                                          "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+
+
+}
+
+void MainWindow::on_ajoutcmd_clicked()
+{
+    QString id,desc,trait,art;
+    int qte,prix;
+    id=ui->idcmd->text();
+    desc=ui->desccmd->toPlainText();
+    trait=ui->trait->currentText();
+    art=ui->art->currentText();
+    QSqlQuery * q=new QSqlQuery;
+    q->prepare("SELECT PU FROM ARTICLES WHERE IDART=:id");
+    q->bindValue(":id",art);
+    q->exec();
+    int pu=q->value(3).toInt();
+    qte=ui->qte1->text().toInt();
+    prix=pu*qte;
+    qDebug()<<" prix total "<<prix<<endl;
+    commande cmd(id,desc,trait,art,qte,prix);
+    cmd.ajouter();
+    ui->tablecmd->setModel(tempCmd.afficher());
+}
+
+void MainWindow::on_suppcmd_clicked()
+{
+    QString icmd=ui->idcmd->text();
+    commande cmd;
+    bool test=cmd.supprimer(icmd);
+    if (test){
+            ui->tablecmd->setModel(tempCmd.afficher());
+            QMessageBox::information(nullptr, QObject::tr("Supprimer un article!"),
+                                     QObject::tr(" Article supprimé ! \n"
+                                                 "Click Cancel to exit."), QMessageBox::Cancel);
+                }
+        else {
+            QMessageBox::critical(nullptr, QObject::tr("Supprimer un article"),
+                                  QObject::tr("Erreur !.\n"
+                                              "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+}
+
+void MainWindow::on_modifcmd_clicked()
+{
+    QString id,desc,art,trait;
+    int qte=ui->qte1->text().toInt();
+    id=ui->idcmd->text();
+    desc=ui->desccmd->toPlainText();
+    art=ui->art->currentText();
+    trait=ui->trait->currentText();
+    QSqlQuery * q=new QSqlQuery;
+    q->prepare("SELECT PU FROM ARTICLES WHERE IDART=:id");
+    q->bindValue(":id",art);
+    q->exec();
+    int pu=q->value(3).toInt();
+    qte=ui->qte1->text().toInt();
+    int prix=pu*qte;
+    qDebug()<<" prix total "<<prix<<endl;
+    commande cmd2(id,desc,trait,art,qte,prix);
+    bool test=cmd2.modifier(cmd2.getidcmd());
+    if (test){
+            ui->tablecmd->setModel(tempCmd.afficher());
+            QMessageBox::information(nullptr, QObject::tr("Modifier une commande!"),
+                                     QObject::tr(" Commande modifié ! \n"
+                                                 "Click Cancel to exit."), QMessageBox::Cancel);
+                }
+        else {
+            QMessageBox::critical(nullptr, QObject::tr("Modifier commande"),
+                                  QObject::tr("Erreur !.\n"
+                                              "Click Cancel to exit."), QMessageBox::Cancel);
+        }
 }

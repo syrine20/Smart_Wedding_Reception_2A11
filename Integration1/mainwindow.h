@@ -17,7 +17,10 @@
 #include <QSortFilterProxyModel>
 #include <QTextTableFormat>
 #include <QStandardItemModel>
-
+#include "patisserie.h"
+#include "traiteur.h"
+#include "article.h"
+#include "commande.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +32,8 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void exporter();
+        void print();
     ~MainWindow();
 
 private slots:
@@ -72,7 +77,7 @@ private slots:
 
 
     
-    void on_ceremonie_clicked();
+    //void on_ceremonie_clicked();
 
 
 
@@ -156,9 +161,9 @@ private slots:
 
     void on_back_clicked();
 
-    void sendMail();
-    void mailSent(QString);
-    void browse();
+    //void sendMail();
+    //void mailSent(QString);
+    //void browse();
 
     void on_backk_clicked();
 
@@ -210,6 +215,66 @@ private slots:
 
     void on_organisation_2_clicked();
 
+    void on_pushButton_3_clicked();
+
+
+    void on_toolButton_clicked();
+
+    void on_alimentation_2_clicked();
+
+    void on_alimentation_3_clicked();
+
+    void on_toolButton_4_clicked();
+
+
+    void on_toolButton_2_clicked();
+
+    void on_TablePatiss_activated(const QModelIndex &index);
+
+    void on_toolButton_3_clicked();
+
+    void on_toolButton_5_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_toolButton_6_clicked();
+
+    void on_toolButton_7_clicked();
+
+    void on_toolButton_8_clicked();
+
+    void on_search_textChanged(const QString &arg1);
+
+    void on_toolButton_9_clicked();
+
+    void on_toolButton_10_clicked();
+
+    void on_toolButton_13_clicked();
+
+    void on_toolButton_14_clicked();
+
+    void on_toolButton_16_clicked();
+
+    void on_toolButton_15_clicked();
+
+    void on_toolButton_17_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_TableTrait_activated(const QModelIndex &index);
+
+    void on_ajoutart_clicked();
+
+    void on_suppart_clicked();
+
+    void on_modifart_clicked();
+
+    void on_ajoutcmd_clicked();
+
+    void on_suppcmd_clicked();
+
+    void on_modifcmd_clicked();
+
 private:
     Ui::MainWindow *ui;
     invites tmpinvite;
@@ -220,5 +285,10 @@ private:
     decorateur dtmp;
     QStringList files;
     QMediaPlayer *player ;
+    patisserie tempPatiss;
+    commande tempCmd;
+    traiteur tempTrait;
+    article tempArt;
+    int rl; //role 1=admin 2=employé
 };
 #endif // MAINWINDOW_H

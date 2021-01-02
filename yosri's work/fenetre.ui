@@ -48,7 +48,7 @@ background-color: rgb(181, 172, 40);
     <string notr="true">background-color: rgb(170, 85, 127);</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page">
     <property name="styleSheet">
@@ -984,7 +984,7 @@ background-color: rgb(170, 85, 127);</string>
        <string>...</string>
       </property>
       <property name="icon">
-       <iconset resource="src.qrc">
+       <iconset>
         <normaloff>:/Downloads/leftwards-black-arrow-emoji-by-twitter.png</normaloff>:/Downloads/leftwards-black-arrow-emoji-by-twitter.png</iconset>
       </property>
       <property name="iconSize">
@@ -1095,7 +1095,7 @@ color: rgb(0, 0, 0);</string>
        <string>...</string>
       </property>
       <property name="icon">
-       <iconset resource="src.qrc">
+       <iconset>
         <normaloff>:/Downloads/leftwards-black-arrow-emoji-by-twitter.png</normaloff>:/Downloads/leftwards-black-arrow-emoji-by-twitter.png</iconset>
       </property>
       <property name="iconSize">

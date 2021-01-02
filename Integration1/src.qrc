@@ -12,5 +12,11 @@
         <file>ressource/Click.wav</file>
         <file>ressource/execel.png</file>
         <file>ressource/pdf.png</file>
+        <file>ressource/downn.png</file>
+        <file>ressource/trier_button.png</file>
+        <file>ressource/upp.png</file>
+        <file>ressource/wedding-cake.png</file>
+        <file>ressource/leftwards-black-arrow-emoji-by-twitter.png</file>
+        <file>ressource/printer.jpg</file>
     </qresource>
 </RCC>

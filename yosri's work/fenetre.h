@@ -76,6 +76,8 @@ private slots:
 
     void on_toolButton_2_clicked();
 
+    void on_comboTrait_activated(const QString &arg1);
+
 private:
     Ui::fenetre *ui;
     QMediaPlayer* player ;
