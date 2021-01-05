@@ -21,6 +21,14 @@
 #include "traiteur.h"
 #include "article.h"
 #include "commande.h"
+#include <QDialog>
+#include "personnel.h"
+#include <QMessageBox>
+#include "tache.h"
+#include <QSortFilterProxyModel>
+#include <QTextTableFormat>
+#include <QStandardItemModel>
+#include "grade.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,6 +43,17 @@ public:
     void exporter();
         void print();
     ~MainWindow();
+        QSortFilterProxyModel *proxy,*proxyt,*proxyg;
+             Personnel tempPerso;
+             Tache tempTache;
+             Grade tempGrade;
+
+
+            void show_tables();
+            void fill_form(int);
+            void fill_formTache(QString);
+            void fill_formGrade(QString);
+
 
 private slots:
     void on_btn_login_clicked();
@@ -161,9 +180,9 @@ private slots:
 
     void on_back_clicked();
 
-    //void sendMail();
-    //void mailSent(QString);
-    //void browse();
+    void sendMail();
+    void mailSent(QString);
+    void browse();
 
     void on_backk_clicked();
 
@@ -275,6 +294,44 @@ private slots:
 
     void on_modifcmd_clicked();
 
+    void on_AjouterPerso_clicked();
+
+    void on_SupprimerPerso_clicked();
+
+    void on_ModifierPerso_clicked();
+
+    void on_RechercherPerso_textChanged(const QString &arg1);
+
+    void on_AjouterTache_clicked();
+
+    void on_SupprimerTache_clicked();
+
+    void on_ModifierTache_clicked();
+
+    void on_ExportExcelTache_clicked();
+
+    void on_EmailTache_clicked();
+
+    void on_pushButton_PDF_Perso_clicked();
+
+    void on_AjouterGrade_clicked();
+
+    void on_SupprimerGrade_clicked();
+
+    void on_ModifierGrade_clicked();
+
+    void on_RechercherGrade_textChanged(const QString &arg1);
+
+    void on_ON_Cgaz_clicked();
+
+    void on_OFF_Cgaz_clicked();
+
+    void on_RessourcesHumaine_clicked();
+
+    void on_pushButton_RetourRHMenu_clicked();
+
+    void on_ImprimerListeGrade_clicked();
+
 private:
     Ui::MainWindow *ui;
     invites tmpinvite;
@@ -290,5 +347,7 @@ private:
     traiteur tempTrait;
     article tempArt;
     int rl; //role 1=admin 2=employé
+
+
 };
 #endif // MAINWINDOW_H

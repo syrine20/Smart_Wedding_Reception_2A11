@@ -32,6 +32,11 @@
 #include"QPdfWriter"
 #include"QtPrintSupport/QPrinter"
 #include"QPainter"
+#include "tache.h"
+#include "personnel.h"
+#include "grade.h"
+#include "exportexcelobject.h"
+#include "mailt.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -122,11 +127,13 @@ if(test)
     if( role=="EMPLOYE" )
     {
      ui->pages->setCurrentIndex(3);
+     rl=2;
     }
 
     else if( role=="ADMIN" )
     {
-     ui->pages->setCurrentIndex(15);
+     ui->pages->setCurrentIndex(16);
+     rl=1;
     }
 ui->tableViewInvites->setModel(tmpinvite.afficher());
 ui->tableViewCerems->setModel(tmpcerem.afficher());
@@ -558,41 +565,41 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_ceremonie_3_clicked()
 {
-    ui->pages->setCurrentIndex(2);
+    ui->pages->setCurrentIndex(3);
 }
 
 void MainWindow::on_ceremonie_2_clicked()
 {
-    ui->pages->setCurrentIndex(2);
+    ui->pages->setCurrentIndex(3);
 }
 
 
 
 void MainWindow::on_gerer_salle_clicked()
 {
-     ui->pages->setCurrentIndex(5);
+     ui->pages->setCurrentIndex(6);
 }
 
 void MainWindow::on_gerer_decorateur_clicked()
 {
-    ui->pages->setCurrentIndex(6);
+    ui->pages->setCurrentIndex(7);
 }
 
 void MainWindow::on_quittersalledeco_clicked()
 {
 
-ui->pages->setCurrentIndex(15);
+ui->pages->setCurrentIndex(16);
 }
 
 void MainWindow::on_liste_des_salle_clicked()
 {
     ui->tablesalle->setModel(stmp.afficher());
-    ui->pages->setCurrentIndex(10);
+    ui->pages->setCurrentIndex(11);
 }
 
 void MainWindow::on_ajouter_salle_clicked()
 {
-    ui->pages->setCurrentIndex(8);
+    ui->pages->setCurrentIndex(9);
 }
 
 void MainWindow::on_quittersalle_clicked()
@@ -602,33 +609,33 @@ void MainWindow::on_quittersalle_clicked()
 
 void MainWindow::on_retoursalle_clicked()
 {
-    ui->pages->setCurrentIndex(4);
+    ui->pages->setCurrentIndex(5);
 }
 
 void MainWindow::on_liste_de_decorateur_clicked()
 {
     ui->tabledeco->setModel(dtmp.afficher());
-    ui->pages->setCurrentIndex(9);
+    ui->pages->setCurrentIndex(10);
 }
 
 void MainWindow::on_ajouter_decorateur_clicked()
 {
-    ui->pages->setCurrentIndex(7);
+    ui->pages->setCurrentIndex(8);
 }
 
 void MainWindow::on_quitterdeco_clicked()
 {
-    ui->pages->setCurrentIndex(15);
+    ui->pages->setCurrentIndex(16);
 }
 
 void MainWindow::on_retourdeco_clicked()
 {
-    ui->pages->setCurrentIndex(4);
+    ui->pages->setCurrentIndex(5);
 }
 
 void MainWindow::on_ajouter_decorateur_2_clicked()
 {
-    ui->pages->setCurrentIndex(9);
+    ui->pages->setCurrentIndex(10);
 
     int id=ui->lineEdit_ideco->text().toInt();
     QString nom=ui->lineEdit_nom->text();
@@ -655,13 +662,13 @@ void MainWindow::on_ajouter_decorateur_2_clicked()
 
 void MainWindow::on_return11_clicked()
 {
-     ui->pages->setCurrentIndex(6);
+     ui->pages->setCurrentIndex(7);
 }
 
 
 void MainWindow::on_ajoutersalle_clicked()
 {
-    ui->pages->setCurrentIndex(10);
+    ui->pages->setCurrentIndex(11);
     int id=ui->lineEdit_id->text().toInt();
     QString lieu=ui->lineEdit_lieu->text();
     int capacite=ui->lineEdit_capacite->text().toInt();
@@ -682,7 +689,7 @@ void MainWindow::on_ajoutersalle_clicked()
 
 void MainWindow::on_retouur_clicked()
 {
-    ui->pages->setCurrentIndex(5);
+    ui->pages->setCurrentIndex(6);
 }
 
 void MainWindow::on_a_retour_clicked()
@@ -752,7 +759,7 @@ void MainWindow::on_idd_recherche_clicked()
 
 void MainWindow::on_suppression_a_clicked()
 {
-     ui->pages->setCurrentIndex(12);
+     ui->pages->setCurrentIndex(13);
 }
 
 void MainWindow::on_supprimer_deco_clicked()
@@ -770,7 +777,7 @@ void MainWindow::on_supprimer_deco_clicked()
 
 void MainWindow::on_update_s_clicked()
 {
-    ui->pages->setCurrentIndex(14);
+    ui->pages->setCurrentIndex(15);
 }
 
 void MainWindow::on_exporteer_pdff_clicked()
@@ -829,12 +836,12 @@ void MainWindow::on_exporteer_pdff_clicked()
 
 void MainWindow::on_home_clicked()
 {
-    ui->pages->setCurrentIndex(15);
+    ui->pages->setCurrentIndex(5);
 }
 
 void MainWindow::on_retouir_clicked()
 {
-    ui->pages->setCurrentIndex(6);
+    ui->pages->setCurrentIndex(7);
 }
 
 void MainWindow::on_trie_capacite_2_clicked()
@@ -873,12 +880,12 @@ void MainWindow::on_suppression_salle_clicked()
 
 void MainWindow::on_reserver_salle_clicked()
 {
-    ui->pages->setCurrentIndex(13);
+    ui->pages->setCurrentIndex(14);
 }
 
 void MainWindow::on_salle_email_clicked()
 {
-    ui->pages->setCurrentIndex(11);
+    ui->pages->setCurrentIndex(12);
 }
 
 void MainWindow::on_export_excel_salle_clicked()
@@ -921,17 +928,17 @@ void MainWindow::on_export_excel_salle_clicked()
 
 void MainWindow::on_retouur5_clicked()
 {
-    ui->pages->setCurrentIndex(5);
+    ui->pages->setCurrentIndex(6);
 }
 
 void MainWindow::on_homme_clicked()
 {
-    ui->pages->setCurrentIndex(4);
+    ui->pages->setCurrentIndex(5);
 }
 
 void MainWindow::on_okk_clicked()
 {
-    ui->pages->setCurrentIndex(10);
+    ui->pages->setCurrentIndex(11);
 
 
    int id=ui->lineEdit_13->text().toInt();
@@ -953,12 +960,12 @@ void MainWindow::on_okk_clicked()
 
 void MainWindow::on_back_clicked()
 {
-    ui->pages->setCurrentIndex(10);
+    ui->pages->setCurrentIndex(11);
 }
 
 void MainWindow::on_backk_clicked()
 {
-    ui->pages->setCurrentIndex(9);
+    ui->pages->setCurrentIndex(10);
 }
 
 void MainWindow::on_imprimer_resrv_clicked()
@@ -971,12 +978,12 @@ void MainWindow::on_imprimer_resrv_clicked()
 
 void MainWindow::on_backkk_clicked()
 {
-    ui->pages->setCurrentIndex(10);
+    ui->pages->setCurrentIndex(11);
 }
 
 void MainWindow::on_okkkkk_clicked()
 {
-    ui->pages->setCurrentIndex(9);
+    ui->pages->setCurrentIndex(10);
 
 
    int id=ui->lineEdit_16->text().toInt();
@@ -1000,7 +1007,7 @@ void MainWindow::on_okkkkk_clicked()
 
 void MainWindow::on_bacck_clicked()
 {
-    ui->pages->setCurrentIndex(9);
+    ui->pages->setCurrentIndex(10);
 }
 
 void MainWindow::on_tabledeco_activated(const QModelIndex &index)
@@ -1191,17 +1198,19 @@ void MainWindow::on_backk_toggled(bool a)
 
 void MainWindow::on_organisation_3_clicked()
 {
-    ui->pages->setCurrentIndex(4);
+    ui->pages->setCurrentIndex(5);
 }
 
 void MainWindow::on_organisation_2_clicked()
 {
-    ui->pages->setCurrentIndex(4);
+    ui->pages->setCurrentIndex(5);
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    ui->pages->setCurrentIndex(15);
+
+    ui->pages->setCurrentIndex(16);
+
 }
 
 void MainWindow::on_toolButton_clicked()
@@ -1242,7 +1251,7 @@ void MainWindow::on_alimentation_3_clicked()
 void MainWindow::on_toolButton_4_clicked()
 {
     if(rl==1)
-    ui->pages->setCurrentIndex(15);//admin
+    ui->pages->setCurrentIndex(17);//admin
     else if (rl==2)
     ui->pages->setCurrentIndex(3);//employé
 }
@@ -1332,12 +1341,13 @@ void MainWindow::on_toolButton_3_clicked()
 
 void MainWindow::on_toolButton_5_clicked()
 {
-    ui->pages->setCurrentIndex(1);
+
+    ui->pages->setCurrentIndex(1);//admin
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    ui->pages->setCurrentIndex(16);
+    ui->pages->setCurrentIndex(17);
     ui->TableTrait->setModel(tempTrait.afficher());
 }
 
@@ -1516,7 +1526,7 @@ void MainWindow::on_toolButton_16_clicked()
 
 void MainWindow::on_toolButton_15_clicked()
 {
-    ui->pages->setCurrentIndex(17);
+    ui->pages->setCurrentIndex(18);
     ui->tableart->setModel(tempArt.afficher());
 }
 
@@ -1527,7 +1537,7 @@ void MainWindow::on_toolButton_17_clicked()
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    ui->pages->setCurrentIndex(18);
+    ui->pages->setCurrentIndex(19);
     ui->tablecmd->setModel(tempCmd.afficher());
     QSqlQuery *q=new QSqlQuery;
     QSqlQueryModel * model=new QSqlQueryModel;
@@ -1705,4 +1715,449 @@ void MainWindow::on_modifcmd_clicked()
                                   QObject::tr("Erreur !.\n"
                                               "Click Cancel to exit."), QMessageBox::Cancel);
         }
+}
+
+void MainWindow::show_tables()
+{
+    //creation model (masque du tableau) : permet recherche et tri
+        proxy = new QSortFilterProxyModel();
+       //definir la source (tableau original)
+        proxy->setSourceModel(tempPerso.afficher());
+       //pour la recherche
+        proxy->setFilterCaseSensitivity(Qt::CaseInsensitive); // S=s (pas de difference entre majiscule et miniscule)
+        proxy->setFilterKeyColumn(-1); // chercher dans tout le tableau (-1) ou donner le numero de la colone//important
+       //remplissage tableau avec le masque
+        ui->tablePerso->setModel(proxy);
+
+            //pour tache
+            proxyt = new QSortFilterProxyModel();
+            proxyt->setSourceModel(tempTache.afficher());
+            proxyt->setFilterCaseSensitivity(Qt::CaseInsensitive);
+            proxyt->setFilterKeyColumn(-1);
+            ui->tableTache->setModel(proxyt);
+
+            //pour grade
+            proxyg = new QSortFilterProxyModel();
+            proxyg->setSourceModel(tempGrade.afficher());
+            proxyg->setFilterCaseSensitivity(Qt::CaseInsensitive);
+            proxyg->setFilterKeyColumn(-1);
+            ui->tableGrade->setModel(proxyg);
+}
+void MainWindow::on_AjouterPerso_clicked()
+{
+    int C =ui->lineEdit_Cin->text().toInt();
+       QString N =ui->lineEdit_nomp->text();
+       QString P =ui->lineEdit_prenomp->text();
+       QString D =ui->lineEdit_datenp->text();
+       QString M =ui->lineEdit_mail->text();
+       int  T =ui->lineEdit_tel->text().toInt();
+       int NbM =ui->lineEdit_nbmar->text().toInt();
+       Personnel Per(C,N,P,D,M,T,NbM);
+       bool test =Per.ajouter();
+        show_tables();
+       if(test)
+       {
+
+           QMessageBox::information(nullptr,"Ajout Personnel","Personnel ajouté");
+       }
+       else
+       {
+           QMessageBox::warning(nullptr,"Ajout Personnel","Personnel non ajouté");
+       }
+}
+
+
+void MainWindow::on_SupprimerPerso_clicked()
+{
+    int i = ui->lineEdit_CINmod_supp->text().toInt();
+        bool test =tempPerso.supprimer(i);
+        show_tables();
+        if(test)
+        {
+
+            QMessageBox::information(nullptr,"Suppression Personnel","Personnel supprimé");
+        }
+        else
+        {
+            QMessageBox::warning(nullptr,"Suppression Personnel","Personnel non supprimé");
+        }
+}
+
+void MainWindow::fill_form(int i)
+{
+    QSqlQuery query;
+       query.prepare("select *from Personnel where CIN=:CIN");
+
+       query.bindValue(":CIN",i);
+       query.exec();
+       while(query.next())
+       {
+           ui->lineEdit_Cin->setText(query.value(i).toString());
+           ui->lineEdit_nomp->setText(query.value(1).toString());
+           ui->lineEdit_prenomp->setText(query.value(2).toString());
+           ui->lineEdit_datenp->setText(query.value(3).toString());
+           ui->lineEdit_tel->setText(query.value(4).toString());
+           ui->lineEdit_mail->setText(query.value(5).toString());
+           ui->lineEdit_nbmar->setText(query.value(6).toString());
+
+
+       }
+}
+
+
+void MainWindow::on_ModifierPerso_clicked()
+{
+    int C =ui->lineEdit_supp->text().toInt();
+           MainWindow d(this);
+           d.fill_form(C);
+       QString N =ui->lineEdit_nomp->text();
+       QString P =ui->lineEdit_prenomp->text();
+       QString D =ui->lineEdit_datenp->text();
+       QString M =ui->lineEdit_mail->text();
+       int T =ui->lineEdit_tel->text().toInt();
+       int  NbM =ui->lineEdit_nbmar->text().toInt();
+       Personnel Per(C,N,P,D,M,T,NbM);
+       bool test =Per.modifier(C);
+       show_tables();
+       if(test)
+       {
+
+           QMessageBox::information(nullptr,"Modification Personnel","Personnel modifié");
+       }
+       else
+       {
+           QMessageBox::warning(nullptr,"Modification Personnel","Personnel non modifié");
+       }
+
+}
+
+
+void MainWindow::on_RechercherPerso_textChanged(const QString &arg1)
+{
+     proxy->setFilterFixedString(arg1);
+}
+
+void MainWindow::on_AjouterTache_clicked()
+{
+    QString N=ui->lineEdit_NomT->text();
+       QString E =ui->lineEdit_EtatT->text();
+       QString D =ui->lineEdit_DateLimitT->text();
+       int I =ui->lineEdit_IDP->text().toInt();
+
+       Tache T(N,E,D,I);
+       bool test =T.ajouter();
+        show_tables();
+       if(test)
+       {
+
+           QMessageBox::information(nullptr,"Ajout Tâche"," Tâche ajouté");
+       }
+       else
+       {
+           QMessageBox::warning(nullptr,"Ajout Tâche","Tâche non ajouté");
+       }
+
+}
+
+void MainWindow::on_SupprimerTache_clicked()
+{
+    Tache T;
+       QString n=ui->NomTSuppMod->text();
+       bool test =T.supprimer(n);
+       show_tables();
+       if(test)
+       {
+
+           QMessageBox::information(nullptr,"Suppression Tâche","Tâche supprimé");
+       }
+       else
+       {
+           QMessageBox::warning(nullptr,"Suppression Tâche","Tâche non supprimé");
+       }
+}
+
+
+
+void MainWindow::fill_formTache(QString N)
+{
+    QSqlQuery query;
+        query.prepare("select *from TAche where NomT=:NomT");
+
+        query.bindValue(":NomT",N);
+        query.exec();
+        while(query.next())
+        {
+            ui->lineEdit_NomT->setText(query.value(N).toString());
+            ui->lineEdit_EtatT->setText(query.value(1).toString());
+            ui->lineEdit_DateLimitT->setText(query.value(2).toString());
+            ui->lineEdit_IDP->setText(query.value(3).toString());
+       }
+}
+void MainWindow::on_ModifierTache_clicked()
+{
+    QString N =ui->NomTSuppMod->text();
+           MainWindow d(this);
+           d.fill_formTache(N);
+       QString E =ui->lineEdit_EtatT->text();
+       QString D =ui->lineEdit_DateLimitT->text();
+       int I =ui->lineEdit_IDP->text().toInt();
+
+       Tache T(N,E,D,I);
+       bool test =T.modifier(N);
+
+       if(test)
+       {
+
+           QMessageBox::information(nullptr,"Modification Tâche","Tâche modifié");
+       }
+       else
+       {
+           QMessageBox::warning(nullptr,"Modification Tâche","Tâche non modifié");
+       }
+        show_tables();
+}
+
+void MainWindow::on_ExportExcelTache_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Excel file"), qApp->applicationDirPath (),
+                                                       tr("Excel Files (*.xls)"));
+       if (fileName.isEmpty())
+           return;
+
+       ExportExcelObject obj(fileName, "mydata", ui->tableTache);
+
+       //colums to export
+       obj.addField(0, "NomT", "char(20)");
+       obj.addField(1, "EtatT", "char(20)");
+       obj.addField(2, "DateLimiteT", "char(20)");
+       obj.addField(3, "IDP", "char(20)");
+
+
+
+       int retVal = obj.export2Excel();
+       if( retVal > 0)
+       {
+           QMessageBox::information(this, tr("Done"),
+                                    QString(tr("%1 records exported!")).arg(retVal)
+                                    );
+       }
+}
+
+void MainWindow::on_EmailTache_clicked()
+{
+   MailT m;
+   m.exec();
+}
+
+void MainWindow::on_pushButton_PDF_Perso_clicked()
+{
+    QString strStream;
+                    QTextStream out(&strStream);
+
+                    const int rowCount = ui->tablePerso->model()->rowCount();
+                    const int columnCount = ui->tablePerso->model()->columnCount();
+
+                    out <<  "<html>\n"
+                        "<head>\n"
+                        "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                        <<  QString("<title>%1</title>\n").arg("strTitle")
+                        <<  "</head>\n"
+                        "<body bgcolor=#ffffff link=#5000A0>\n"
+
+                       //     "<align='right'> " << datefich << "</align>"
+                        "<center> <H1>Liste des Personnels </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+
+                    // headers
+                    out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
+                    for (int column = 0; column < columnCount; column++)
+                        if (!ui->tablePerso->isColumnHidden(column))
+                            out << QString("<th>%1</th>").arg(ui->tablePerso->model()->headerData(column, Qt::Horizontal).toString());
+                    out << "</tr></thead>\n";
+
+                    // data table
+                    for (int row = 0; row < rowCount; row++) {
+                        out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
+                        for (int column = 0; column < columnCount; column++) {
+                            if (!ui->tablePerso->isColumnHidden(column)) {
+                                QString data = ui->tablePerso->model()->data(ui->tablePerso->model()->index(row, column)).toString().simplified();
+                                out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                            }
+                        }
+                        out << "</tr>\n";
+                    }
+                    out <<  "</table> </center>\n"
+                        "</body>\n"
+                        "</html>\n";
+
+              QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Sauvegarder en PDF", QString(), "*.pdf");
+                if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+
+               QPrinter printer (QPrinter::PrinterResolution);
+                printer.setOutputFormat(QPrinter::PdfFormat);
+               printer.setPaperSize(QPrinter::A4);
+              printer.setOutputFileName(fileName);
+
+               QTextDocument doc;
+                doc.setHtml(strStream);
+                doc.setPageSize(printer.pageRect().size());
+                doc.print(&printer);
+}
+
+void MainWindow::on_AjouterGrade_clicked()
+{
+       QString Gr=ui->lineEdit_NomGrade->text();
+       QString DEmb =ui->lineEdit_DateEmbauche->text();
+       QString SG =ui->lineEdit_SalaireGrade->text();
+       int IG =ui->lineEdit_IDPG->text().toInt();
+
+       Grade G(Gr,DEmb,SG,IG);
+       bool test =G.ajouter();
+        show_tables();
+       if(test)
+       {
+
+           QMessageBox::information(nullptr,"Ajout Grade"," Grade ajouté");
+       }
+       else
+       {
+           QMessageBox::warning(nullptr,"Ajout Grade","Grade non ajouté");
+       }
+}
+
+
+void MainWindow::on_SupprimerGrade_clicked()
+{
+    Grade G;
+    QString n=ui->lineEdit_NomGSupMod->text();
+    bool test =G.supprimer(n);
+    show_tables();
+    if(test)
+    {
+
+        QMessageBox::information(nullptr,"Suppression Grade ","Grade supprimé");
+    }
+    else
+    {
+        QMessageBox::warning(nullptr,"Suppression Grade","Grade non supprimé");
+    }
+}
+
+
+void MainWindow::fill_formGrade(QString Gr)
+{
+    QSqlQuery query;
+    query.prepare("select *from Grade where NomGrade=:NomGrade");
+
+    query.bindValue(":NomGrade",Gr);
+    query.exec();
+    while(query.next())
+    {
+        ui->lineEdit_NomGrade->setText(query.value(Gr).toString());
+        ui->lineEdit_DateEmbauche->setText(query.value(1).toString());
+        ui->lineEdit_SalaireGrade->setText(query.value(2).toString());
+        ui->lineEdit_IDPG->setText(query.value(3).toString());
+   }
+}
+void MainWindow::on_ModifierGrade_clicked()
+{
+    QString Gr =ui->lineEdit_NomGSupMod->text();
+        MainWindow d(this);
+        d.fill_formGrade(Gr);
+    QString DEmb =ui->lineEdit_DateEmbauche->text();
+    QString SG =ui->lineEdit_SalaireGrade->text();
+    int IG =ui->lineEdit_IDPG->text().toInt();
+
+    Grade G(Gr,DEmb,SG,IG);
+    bool test =G.modifier(Gr);
+
+    if(test)
+    {
+
+        QMessageBox::information(nullptr,"Modification Grade","Grade modifié");
+    }
+    else
+    {
+        QMessageBox::warning(nullptr,"Modification Grade","Grade non modifié");
+    }
+     show_tables();
+}
+
+void MainWindow::on_RechercherGrade_textChanged(const QString &arg1)
+{
+     proxyg->setFilterFixedString(arg1);
+}
+
+void MainWindow::on_ON_Cgaz_clicked()
+{
+    a.write_to_arduino("1");
+}
+
+
+void MainWindow::on_OFF_Cgaz_clicked()
+{
+     a.write_to_arduino("0");
+}
+
+void MainWindow::on_RessourcesHumaine_clicked()
+{
+  ui->pages->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_RetourRHMenu_clicked()
+{
+  ui->pages->setCurrentIndex(16);
+}
+
+void  MainWindow::browse()//mail
+{
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void   MainWindow::sendMail()//send mail
+{
+    Smtp* smtp = new Smtp("siwar.dhrif@esprit.tn",ui->mail_pass->text(), "smtp.gmail.com");
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail("siwar.dhrif@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail("siwar.dhrif@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+void   MainWindow::mailSent(QString status)//mail sent
+{
+
+    if(status == "Message sent")
+        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    ui->rcpt->clear();
+    ui->subject->clear();
+    ui->file->clear();
+    ui->msg->clear();
+    ui->mail_pass->clear();
+}
+
+void MainWindow::on_ImprimerListeGrade_clicked()
+{
+    QPrinter printer;
+
+                printer.setPrinterName("desiered printer name");
+
+              QPrintDialog dialog(&printer,this);
+
+                if(dialog.exec()== QDialog::Rejected)
+
+                    return;
 }

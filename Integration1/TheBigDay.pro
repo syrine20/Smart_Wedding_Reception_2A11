@@ -26,14 +26,19 @@ SOURCES += \
     commande.cpp \
     connexion.cpp \
     decorateur.cpp \
+    exportexcelobject.cpp \
+    grade.cpp \
     invites.cpp \
     login.cpp \
+    mailt.cpp \
     main.cpp \
     mainwindow.cpp \
     patisserie.cpp \
+    personnel.cpp \
     salle.cpp \
     smtp.cpp \
     stat.cpp \
+    tache.cpp \
     traiteur.cpp
 
 HEADERS += \
@@ -43,16 +48,22 @@ HEADERS += \
     commande.h \
     connexion.h \
     decorateur.h \
+    exportexcelobject.h \
+    grade.h \
     invites.h \
     login.h \
+    mailt.h \
     mainwindow.h \
     patisserie.h \
+    personnel.h \
     salle.h \
     smtp.h \
     stat.h \
+    tache.h \
     traiteur.h
 
 FORMS += \
+    mailt.ui \
     mainwindow.ui \
     stat.ui
 
