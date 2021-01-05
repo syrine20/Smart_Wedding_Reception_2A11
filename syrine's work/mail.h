@@ -25,6 +25,9 @@ private slots:
     void mailSent(QString);
     void browse();
 
+
+
+
 private:
     Ui::mail *ui;
      QStringList files;

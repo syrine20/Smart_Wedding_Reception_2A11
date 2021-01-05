@@ -18,6 +18,7 @@ SOURCES += \
     mainwindow.cpp \
     personnel.cpp \
     smtp.cpp \
+    stat_combo.cpp \
     tache.cpp
 
 HEADERS += \
@@ -29,12 +30,14 @@ HEADERS += \
     mainwindow.h \
     personnel.h \
     smtp.h \
+    stat_combo.h \
     tache.h
 
 FORMS += \
     dialog.ui \
     mail.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    stat_combo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

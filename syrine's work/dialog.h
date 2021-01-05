@@ -10,6 +10,7 @@
 #include <QStandardItemModel>
 #include "exportexcelobject.h"
 #include "arduino.h"
+#include "stat_combo.h"
 namespace Ui {
 class Dialog;
 }
@@ -61,12 +62,14 @@ private slots:
 
     void on_OFF_clicked();
 
+    void on_stat_clicked();
+
 private:
     Ui::Dialog *ui;
 
     Arduino A;
     QByteArray data;
-
+      stat_combo *s;
 
 };
 

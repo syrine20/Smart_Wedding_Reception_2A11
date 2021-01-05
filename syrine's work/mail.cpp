@@ -59,3 +59,6 @@ void   mail::mailSent(QString status)
     ui->msg->clear();
     ui->mail_pass->clear();
 }
+
+
+

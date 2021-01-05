@@ -5,6 +5,7 @@
 #include "mail.h"
 #include <QDebug>
 #include "arduino.h"
+#include "stat_combo.h"
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
@@ -298,4 +299,13 @@ void Dialog::on_ON_clicked()
 void Dialog::on_OFF_clicked()
 {
      A.write_to_arduino("0");
+}
+
+void Dialog::on_stat_clicked()
+{
+    s = new stat_combo();
+
+  s->setWindowTitle("statistique ComboBox");
+  s->choix_pie();
+  s->show();
 }

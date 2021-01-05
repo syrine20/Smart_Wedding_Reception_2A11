@@ -60,7 +60,7 @@ color: rgb(85, 85, 127);</string>
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_Promotions">
     <attribute name="title">
@@ -93,7 +93,7 @@ font: italic 12pt &quot;MS Sans Serif&quot;;
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_promotions_ajouter">
       <attribute name="title">

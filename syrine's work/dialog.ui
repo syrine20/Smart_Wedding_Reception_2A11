@@ -32,7 +32,7 @@ border-bottom-color: rgb(132, 235, 235);
 background-color: rgb(255, 180, 185);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -604,6 +604,24 @@ color: rgb(68, 68, 68);</string>
        </property>
        <property name="text">
         <string>export excel</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="stat">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>330</y>
+         <width>161</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Snap ITC&quot;;
+
+color: rgb(68, 68, 68);</string>
+       </property>
+       <property name="text">
+        <string>statistique  </string>
        </property>
       </widget>
      </widget>
