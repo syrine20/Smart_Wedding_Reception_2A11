@@ -33,13 +33,16 @@ SOURCES += \
     mailt.cpp \
     main.cpp \
     mainwindow.cpp \
+    pack.cpp \
     patisserie.cpp \
     personnel.cpp \
+    promotion.cpp \
     salle.cpp \
     smtp.cpp \
     stat.cpp \
     tache.cpp \
-    traiteur.cpp
+    traiteur.cpp \
+    vente.cpp
 
 HEADERS += \
     arduino.h \
@@ -54,13 +57,16 @@ HEADERS += \
     login.h \
     mailt.h \
     mainwindow.h \
+    pack.h \
     patisserie.h \
     personnel.h \
+    promotion.h \
     salle.h \
     smtp.h \
     stat.h \
     tache.h \
-    traiteur.h
+    traiteur.h \
+    vente.h
 
 FORMS += \
     mailt.ui \

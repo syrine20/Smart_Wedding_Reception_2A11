@@ -29,6 +29,9 @@
 #include <QTextTableFormat>
 #include <QStandardItemModel>
 #include "grade.h"
+#include "promotion.h"
+#include "pack.h"
+#include "vente.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -53,7 +56,10 @@ public:
             void fill_form(int);
             void fill_formTache(QString);
             void fill_formGrade(QString);
-
+            void recherche(Ui::MainWindow *ui);
+            void TRI_ID(Ui::MainWindow *ui);
+            void TRI_Categorie(Ui::MainWindow *ui);
+            void TRI_Prix(Ui::MainWindow *ui);
 
 private slots:
     void on_btn_login_clicked();
@@ -332,6 +338,62 @@ private slots:
 
     void on_ImprimerListeGrade_clicked();
 
+    void on_marketing_2_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton__valider_promotions_ajouter_clicked();
+
+    void on_pushButton_modif_promotions_clicked();
+
+    void on_pushButton_supp_promotions_clicked();
+
+    void on_pushButton_valider_Packs_ajouter_clicked();
+
+    void on_pushButton_modif_pack_clicked();
+
+    void on_pushButton_supp_pack_clicked();
+
+    void on_pushButton_rechercher_packs_clicked();
+
+    void on_pushButton_tri_pack_ID_clicked();
+
+    void on_pushButton_tri_id_pack_inverse_clicked();
+
+    void on_pushButton_tri_categorie_pack_clicked();
+
+    void on_pushButton_tri_categorie_pack_inverse_clicked();
+
+    void on_pushButton_tri_pack_prix_clicked();
+
+    void on_pushButton_tri_prix_pack_inverse_clicked();
+
+    void on_pushButton_pdf_clicked();
+
+    void on_pushButton_imprimer_liste_promotions_clicked();
+
+    void on_pushButto_ajouter_vente_clicked();
+
+    void on_pushButton_retour_promotions_ajouter_clicked();
+
+    void on_pushButton_retour_promotions_consulter_clicked();
+
+    void on_pushButton_retour_packs_ajouter_clicked();
+
+    void on_pushButton_retour_packs_consulter_clicked();
+
+    void on_pushButton_retour_ventes_clicked();
+
+    void on_comboBox_activated(const QString &arg1);
+
+    void on_trait_activated(const QString &arg1);
+
+    void on_type_activated(const QString &arg1);
+
+
+
+    void on_liste_activated(int index);
+
 private:
     Ui::MainWindow *ui;
     invites tmpinvite;
@@ -346,6 +408,9 @@ private:
     commande tempCmd;
     traiteur tempTrait;
     article tempArt;
+    pack PA;
+    promotion P;
+    vente V;
     int rl; //role 1=admin 2=employé
 
 

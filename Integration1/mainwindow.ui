@@ -39,7 +39,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>20</number>
     </property>
     <widget class="QWidget" name="menu">
      <widget class="QLabel" name="label_LoginPass">
@@ -751,6 +751,9 @@ color: rgb(255, 255, 255);</string>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
            </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
+           </property>
           </widget>
           <widget class="QPushButton" name="SupprimerPerso">
            <property name="geometry">
@@ -998,6 +1001,9 @@ border-image: url(:/ressource/pdf.png);</string>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
            </property>
+           <property name="maxLength">
+            <number>8</number>
+           </property>
           </widget>
           <widget class="QLineEdit" name="lineEdit_nomp">
            <property name="geometry">
@@ -1049,6 +1055,9 @@ border-image: url(:/ressource/pdf.png);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="maxLength">
+            <number>8</number>
            </property>
           </widget>
           <widget class="QLineEdit" name="lineEdit_mail">
@@ -1127,6 +1136,9 @@ border-image: url(:/ressource/pdf.png);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="sortingEnabled">
+            <bool>true</bool>
            </property>
           </widget>
           <widget class="QPushButton" name="ExportExcelTache">
@@ -1341,6 +1353,9 @@ border-image: url(:/ressource/pdf.png);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="maxLength">
+            <number>8</number>
            </property>
           </widget>
           <widget class="QPushButton" name="AjouterTache">
@@ -1617,6 +1632,9 @@ border-image: url(:/ressource/pdf.png);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="maxLength">
+            <number>8</number>
            </property>
           </widget>
           <widget class="QPushButton" name="AjouterGrade">
@@ -5558,10 +5576,10 @@ border-color: rgb(255, 255, 255);</string>
       <widget class="QLabel" name="label_44">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>10</x>
          <y>50</y>
-         <width>161</width>
-         <height>51</height>
+         <width>201</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -6205,6 +6223,807 @@ font: 18pt &quot;Sachiko&quot;;</string>
          <height>250</height>
         </size>
        </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_15">
+     <widget class="QLabel" name="label_background">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>931</width>
+        <height>641</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/ressource/mariage.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_marketing">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>931</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/ressource/mariage.jpg);
+color: rgb(16, 64, 127);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>Promotions</string>
+       </attribute>
+       <widget class="QTabWidget" name="tabWidget_promotions">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>931</width>
+          <height>591</height>
+         </rect>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Triangular</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_13">
+         <attribute name="title">
+          <string>Ajouter</string>
+         </attribute>
+         <widget class="QPushButton" name="pushButton__valider_promotions_ajouter">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>417</y>
+            <width>41</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/add.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="src.qrc">
+            <normaloff>:/ressource/add.png</normaloff>:/ressource/add.png</iconset>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_modif_promotions">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>417</y>
+            <width>41</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/modify.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>80</y>
+            <width>341</width>
+            <height>271</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_ajoutprom">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_ID_promotions_ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_ID_promotions_ajouter"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_Nom_promotions_ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Nom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_Nom_promotions_ajouter"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_pourcentge_promotions_ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Pourcentage</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_pourcentge_promotions_ajouter"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButton_retour_promotions_ajouter">
+          <property name="geometry">
+           <rect>
+            <x>770</x>
+            <y>510</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Retour</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_14">
+         <attribute name="title">
+          <string>Consulter</string>
+         </attribute>
+         <widget class="QLabel" name="label_liste_promotions_consulter">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>20</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+</string>
+          </property>
+          <property name="text">
+           <string>Liste des promotions</string>
+          </property>
+         </widget>
+         <widget class="QTableView" name="tableView_Promotions_consulter">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>521</width>
+            <height>431</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="ID_promotion_supprimer">
+          <property name="geometry">
+           <rect>
+            <x>630</x>
+            <y>330</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_supp_promotions">
+          <property name="geometry">
+           <rect>
+            <x>770</x>
+            <y>330</y>
+            <width>121</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_imprimer_liste_promotions">
+          <property name="geometry">
+           <rect>
+            <x>790</x>
+            <y>100</y>
+            <width>61</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/printer.jpg);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_supp_promotions">
+          <property name="geometry">
+           <rect>
+            <x>780</x>
+            <y>390</y>
+            <width>51</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/Delete.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_retour_promotions_consulter">
+          <property name="geometry">
+           <rect>
+            <x>750</x>
+            <y>510</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>retour</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>Packs</string>
+       </attribute>
+       <widget class="QTabWidget" name="tabWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>931</width>
+          <height>581</height>
+         </rect>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Triangular</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_17">
+         <attribute name="title">
+          <string>Ajouter</string>
+         </attribute>
+         <widget class="QPushButton" name="pushButton_valider_Packs_ajouter">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>340</y>
+            <width>51</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/add.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_modif_pack">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>337</y>
+            <width>51</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/modify.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>30</y>
+            <width>261</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="2">
+            <widget class="QLineEdit" name="lineEdit_Categorie_Packs_Ajouter"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_Liste_Packs_Ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="text">
+              <string>Liste</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_ID_Packs_Ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+             </property>
+             <property name="text">
+              <string>ID_Pack</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLineEdit" name="lineEdit_prix_initial_packs_ajouter"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="lineEdit_ID_Packs_Ajouter"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_prix_initial_packs_ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="text">
+              <string>Prix_initial</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_Categorie_Packs_Ajouter">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="text">
+              <string>Categorie</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="lineEdit_Liste_Packs_Ajouter"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButton_retour_packs_ajouter">
+          <property name="geometry">
+           <rect>
+            <x>760</x>
+            <y>490</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>retour</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_18">
+         <attribute name="title">
+          <string>Consulter</string>
+         </attribute>
+         <widget class="QLabel" name="label_liste_packs_consulter">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>281</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+          </property>
+          <property name="text">
+           <string>Liste des packs</string>
+          </property>
+         </widget>
+         <widget class="QTableView" name="tableView_packs_consulter">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>80</y>
+            <width>541</width>
+            <height>431</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 170, 0);</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_Tri_ID">
+          <property name="geometry">
+           <rect>
+            <x>700</x>
+            <y>170</y>
+            <width>111</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+</string>
+          </property>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_Tri_Categorie">
+          <property name="geometry">
+           <rect>
+            <x>700</x>
+            <y>240</y>
+            <width>111</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+</string>
+          </property>
+          <property name="text">
+           <string>Categorie</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_Tri_Prix">
+          <property name="geometry">
+           <rect>
+            <x>700</x>
+            <y>310</y>
+            <width>111</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+</string>
+          </property>
+          <property name="text">
+           <string>Prix</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_rechercher_packs">
+          <property name="geometry">
+           <rect>
+            <x>830</x>
+            <y>80</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/cherr.jpg);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_tri_pack_ID">
+          <property name="geometry">
+           <rect>
+            <x>630</x>
+            <y>170</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/down.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_tri_categorie_pack">
+          <property name="geometry">
+           <rect>
+            <x>630</x>
+            <y>240</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/down.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_tri_pack_prix">
+          <property name="geometry">
+           <rect>
+            <x>630</x>
+            <y>310</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/down.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_tri_id_pack_inverse">
+          <property name="geometry">
+           <rect>
+            <x>830</x>
+            <y>170</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/up.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_tri_categorie_pack_inverse">
+          <property name="geometry">
+           <rect>
+            <x>830</x>
+            <y>240</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/up.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_tri_prix_pack_inverse">
+          <property name="geometry">
+           <rect>
+            <x>830</x>
+            <y>310</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/up.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_pdf">
+          <property name="geometry">
+           <rect>
+            <x>720</x>
+            <y>450</y>
+            <width>41</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ressource/pdf.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_rechercher_packs_consulter">
+          <property name="geometry">
+           <rect>
+            <x>640</x>
+            <y>80</y>
+            <width>151</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>390</y>
+            <width>281</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="ID_pack_supprimer">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="text">
+              <string>ID_Pack</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_sup_pack"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_supp_pack">
+             <property name="styleSheet">
+              <string notr="true">border-image: url(:/ressource/Delete.png);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButton_retour_packs_consulter">
+          <property name="geometry">
+           <rect>
+            <x>800</x>
+            <y>520</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>retour</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_12">
+       <attribute name="title">
+        <string>Ventes</string>
+       </attribute>
+       <widget class="QLabel" name="label_liste_Ventes">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>241</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>Liste des ventes</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableView_vente">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>60</y>
+          <width>421</width>
+          <height>431</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButto_ajouter_vente">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>340</y>
+          <width>61</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/ressource/add.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>150</y>
+          <width>211</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_ID_vente">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+</string>
+           </property>
+           <property name="text">
+            <string>ID_vente</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_ID_vente"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_prix_final_vente">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+</string>
+           </property>
+           <property name="text">
+            <string>Prix_final</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_Prix_final_vente"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton_retour_ventes">
+        <property name="geometry">
+         <rect>
+          <x>810</x>
+          <y>550</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>retour</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>

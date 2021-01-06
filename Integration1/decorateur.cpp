@@ -1,4 +1,5 @@
 #include "decorateur.h"
+
 decorateur::decorateur()
 {
 
@@ -61,6 +62,3 @@ bool decorateur::modifier(int id,QString nom,QString style,int num_telephone,QSt
     query.bindValue(":lieu",lieu);
     return query.exec();
 }
-
-
-

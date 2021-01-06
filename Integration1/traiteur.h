@@ -2,7 +2,7 @@
 #define TRAITEUR_H
 #include <QString>
 #include "patisserie.h"
-
+#include <qsqlquerymodel.h>
 class traiteur
 {
 public:

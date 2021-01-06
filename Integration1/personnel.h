@@ -4,7 +4,7 @@
 #include <QVariant>
 #include <QDate>
 #include <QSqlQuery>
-#include <QSqlQueryModel>
+#include <qsqlquerymodel.h>
 
 class Personnel
 {
