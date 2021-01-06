@@ -5,15 +5,10 @@
 #include<QString>
 #include<QVariant>
 #include<QSqlQuery>
-#include<QSqlQueryModel>
+#include <qsqlquerymodel.h>
 class decorateur
 {
-    int id;
-    QString nom;
-    QString style;
-    int num_telephone;
-    QString email;
-    QString lieu;
+
 public:
     //constructeurs
     decorateur();
@@ -32,9 +27,14 @@ public:
     bool supprimer(int id);
     QSqlQueryModel * afficher();
     bool modifier(int id, QString nom,QString style,int num_telephone, QString email, QString lieu);
-
+private :
+    int id;
+    QString nom;
+    QString style;
+    int num_telephone;
+    QString email;
+    QString lieu;
 
 };
 
 #endif // DECORATEUR_H
-

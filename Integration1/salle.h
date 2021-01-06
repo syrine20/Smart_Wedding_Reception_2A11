@@ -4,7 +4,7 @@
 #include<QString>
 #include<QVariant>
 #include<QSqlQuery>
-#include<QSqlQueryModel>
+#include <qsqlquerymodel.h>
 
 class salle
 

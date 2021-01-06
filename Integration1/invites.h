@@ -3,7 +3,7 @@
 
 #include <QString>
 #include <QSqlQuery>
-#include <QSqlQueryModel>
+#include <qsqlquerymodel.h>
 #include <QDialog>
 #include <QDate>
 

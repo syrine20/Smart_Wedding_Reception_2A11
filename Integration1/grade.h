@@ -2,7 +2,7 @@
 #define GRADE_H
 #include <QString>
 #include <QSqlQuery>
-#include <QSqlQueryModel>
+#include <qsqlquerymodel.h>
 
 class Grade
 {
